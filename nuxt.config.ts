@@ -32,7 +32,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:site",
-          content: "https://portfolio-d9g2jx6w0-kimej.vercel.app/",
+          content: "https://portfolio-kimej.vercel.app/",
         },
         {
           property: "og:title",
