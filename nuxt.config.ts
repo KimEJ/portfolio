@@ -32,7 +32,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:site",
-          content: "https://kimej.github.io/portfolio/",
+          content: "https://portfolio-d9g2jx6w0-kimej.vercel.app/",
         },
         {
           property: "og:title",
@@ -46,7 +46,7 @@ export default defineNuxtConfig({
         // sharing thumbmail img
         {
           property: "og:image",
-          content: "/favicons/favicon.ico",
+          content: "/portfolio/favicons/favicon.ico",
         },
         // google site verification
         {
@@ -54,7 +54,7 @@ export default defineNuxtConfig({
           content: "", //TODO: add google site verification
         },
       ],
-      link: [{ rel: "icon", href: "/favicons/favicon.ico" }],
+      link: [{ rel: "icon", href: "/portfolio/favicons/favicon.ico" }],
     },
   },
   modules: ["@nuxtjs/tailwindcss"],

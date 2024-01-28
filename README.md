@@ -1,5 +1,5 @@
 <div>
-    <img src="https://www.eazypau.com/favicon-bw.png" alt="favicon" width="100"/>
+    <img src="https://www.eazypau.com/favicon-bw.png" alt="favicon" width="100"/portfolio/>
 </div>
 
 # Personal Portfolio Website

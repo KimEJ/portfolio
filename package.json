@@ -3,7 +3,7 @@
   "name": "porfolio",
   "author": {
     "name": "KimEoJin",
-    "url": "https://kimej.github.io/portfolio/"
+    "url": "https://portfolio-d9g2jx6w0-kimej.vercel.app/"
   },
   "scripts": {
     "dev": "nuxi dev",

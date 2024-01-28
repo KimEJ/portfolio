@@ -28,12 +28,12 @@ const jsonLd = {
     "@type": "Person",
     "@id": "#kimuj5090",
   },
-  url: "https://kimej.github.io/portfolio/",
+  url: "https://portfolio-d9g2jx6w0-kimej.vercel.app/",
   description:
   "김어진의 개인 포트폴리오 웹 사이트",
     keywords:
     "Web Developer, Front End Developer, Frontend Developer, Junior Web Developer, Software Developer, Software Engineer",
-  image: "https://kimej.github.io/portfolio/fotis-fotopoulos-6sAl6aQ4OWI.webp.png",
+  image: "https://portfolio-d9g2jx6w0-kimej.vercel.app/fotis-fotopoulos-6sAl6aQ4OWI.webp.png",
 };
 const personJson = {
   "@context": "https://schema.org/",
@@ -41,7 +41,7 @@ const personJson = {
   "@id": "#kimuj5090",
   name: "김어진",
   email: "kimuj5090@gmail.com",
-  url: "https://kimej.github.io/portfolio/",
+  url: "https://portfolio-d9g2jx6w0-kimej.vercel.app/",
 };
 useHead({
   script: [

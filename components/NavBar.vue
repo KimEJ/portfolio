@@ -87,8 +87,8 @@
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 import { Bars3Icon, MoonIcon, SunIcon } from "@heroicons/vue/24/outline";
 import { gsap } from "gsap";
-import blackWhiteFavicon from "/favicons/favicon.ico";
-import whiteBlackFavicon from "/favicons/favicon.svg";
+import blackWhiteFavicon from "/portfolio/favicons/favicon.ico";
+import whiteBlackFavicon from "/portfolio/favicons/favicon.svg";
 
 useHead({
   script: [
@@ -126,8 +126,8 @@ const trackScroll = () => {
   trackNavBarPosition("nav-bar");
 };
 const goToHome = () => {
-  if (route.path !== "/") {
-    window.location.href = "/";
+  if (route.path !== "/portfolio/") {
+    window.location.href = "/portfolio/";
   } else {
     scrollTop();
   }
@@ -150,7 +150,7 @@ const entering = (el, done) => {
 };
 
 watchEffect(() => {
-  if (route.path === "/") {
+  if (route.path === "/portfolio/") {
     if (currentScreenWidth.value <= 640) {
       if (
         currentOffsetHeight.value >
