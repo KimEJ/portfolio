@@ -3,28 +3,23 @@ export function useConstants() {
     {
       id: 2,
       name: "스킬",
-      href: "/skills",
+      href: "/#skills",
     },
     {
       id: 6,
       name: "타임라인",
-      href: "/timeline",
+      href: "/#timeline",
     },
     {
       id: 3,
       name: "경력",
-      href: "/works",
+      href: "/#works",
     },
     {
       id: 4,
       name: "개인 프로젝트",
-      href: "/projects",
+      href: "/#projects",
     },
-    // {
-    //   id: 6,
-    //   name: "Blog",
-    //   href: "https://my-blog-eazypau.vercel.app/",
-    // },
   ];
 
   const skillWithLogo = [
@@ -93,6 +88,7 @@ export function useConstants() {
     }
   ];
 
+  
   const projects = [
     {
       isReverse: true,
@@ -101,7 +97,7 @@ export function useConstants() {
       filterColor: "bg-slate-900 bg-opacity-60",
       imageUrl: "/project-ss/teamfirewood.png",
       description: "사이드 프로젝트를 진행하는 팀인 '팀 파이어우드' 소개 페이지",
-      techStack: ["NextJS", "TS", "TailwindCSS"],
+      techStack: ["NuxtJS", "TS", "TailwindCSS"],
       isUrl: true,
       urlLink: "https://tfw.kr/",
       // githubLink: "https://github.com/eazypau/my-blog",
@@ -114,7 +110,7 @@ export function useConstants() {
       imageUrl: "/project-ss/iroun.png",
       description: "개발자들이 모여 봉사활동을 하는 봉사팀 '이로운' 소개 페이지",
       techStack: [
-        "NextJS",
+        "NuxtJS",
         "TS",
         "TailwindCSS",
         "Firebase",
@@ -135,9 +131,30 @@ export function useConstants() {
         "Python3",
         "pyjwt"
       ],
-      isUrl: true,
+      isUrl: false,
       // urlLink: "https://eazy-chat-app.netlify.app/login",
       githubLink: "https://github.com/KimEJ/WRaThioN",
+    },
+    {
+      isReverse: false,
+      title: "바이오 헬스케어 플랫폼",
+      titleColor: "text-white",
+      filterColor: "bg-slate-900 bg-opacity-60",
+      imageUrl: "/project-ss/leestech.png",
+      description:
+        "'팀 파이어우드'에서 개발한 바이오 헬스케어 단말을 관리하는 플랫폼",
+      techStack: [
+        "NuxtJS",
+        "FastAPI",
+        "TS",
+        "TailwindCSS",
+        "MQTT",
+        "MongoDB",
+        "Docker",
+      ],
+      isUrl: false,
+      // urlLink: "https://eazy-chat-app.netlify.app/login",
+      // githubLink: "https://github.com/KimEJ/WRaThioN",
     }
   ];
 
@@ -328,8 +345,41 @@ export function useConstants() {
       name: "InterPass",
       description: "InterPass는 버스 등 대중교통 시스템을 유지보수하는 회사입니다.\n"+
       "저는 InterPass에서 node.js 기반의 백엔드 개발자로서의 경험을 다졌습니다.",
-      techStack: ["Node.js", "TS", "Nest", "MySQL", "GraphQL"],
+      techStack: ["Node.js", "TS", "NestJS", "MySQL", "GraphQL"],
       projects: [
+        {
+          image: {
+            src: "/work/interpass/app-store/main.png",
+            alt: "app store main",
+            width: "410",
+            height: "117",
+            maxWidth: "max-w-[60%] md:max-w-[50%] 3xl:max-w-[55%]",
+          },
+          imageShowcase: [
+            {
+              title: "메인 화면",
+              src: "/work/interpass/app-store/main.png",
+              alt: "메인 화면",
+              width: "800",
+              height: "446",
+            },
+            {
+              title: "앱 상세 화면",
+              src: "/work/interpass/app-store/detail.png",
+              alt: "앱 상세 화면",
+              width: "800",
+              height: "446",
+            },
+          ],
+          teamMembers: [],
+          heading: "앱 스토어",
+          description:
+            "앱 스토어는 InterPass에서 개발한\n"+
+            "버스 유지보수 업무 관리 시스템과\n"+
+            "택시 유지보수 업무 관리 시스템의\n"+
+            "앱을 관리하는 웹 앱이었습니다.\n",
+          techStack: ["Vue", "TS", "Firebase"],
+        },
         {
           image: {
             src: "/work/interpass/taxi-erp/main.png",
@@ -388,7 +438,7 @@ export function useConstants() {
           "택시 유지보수 업무 관리 시스템은\n"+
           "새로 시작된 택시 유지보수 업무를\n"+
           "디지털화하여 관리하는 시스템이었습니다.",
-          techStack: ["Nest", "TS", "GraphQL", "MySQL", "Vue", "Vuetify"],
+          techStack: ["NestJS", "TS", "GraphQL", "MySQL", "Vue", "Vuetify"],
           urls: [],
         },
         {
@@ -436,7 +486,7 @@ export function useConstants() {
           "기존의 아날로그방식의 업무와 재고 관리 체계를\n"+
           "디지털화하여 관리하는 시스템이었습니다.\n\n"+
           "저는 이 프로젝트에서 백엔드 및 웹 개발을 담당했습니다.",
-          techStack: ["Nest", "TS", "GraphQL", "MySQL", "Vue", "Vuetify"],
+          techStack: ["NestJS", "TS", "GraphQL", "MySQL", "Vue", "Vuetify"],
           urls: [],
         },
       ],
@@ -476,7 +526,7 @@ export function useConstants() {
     },
     {
       date: "2016. 02",
-      title: "대덕소프트웨어마이스터고등학교 졸업",
+      title: "대덕소프트웨어마이스터고등학교 입학",
       description:
         "대덕소프트웨어마이스터고등학교에서 개발자로서의 기본기를 다졌습니다.",
       link: {
@@ -485,6 +535,7 @@ export function useConstants() {
       },
     },
   ];
+
 
   return {
     navigation,

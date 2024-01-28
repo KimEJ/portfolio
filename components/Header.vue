@@ -1,6 +1,6 @@
 <template>
   <header class="headerHeight">
-    <div>
+    <div style="background: #000;">
       <img
         src="/fotis-fotopoulos-6sAl6aQ4OWI.webp.png"
         sizes="(max-width: 768px) 50vw, (max-width: 1024px) 80vw, (max-width: 1439px) 100vw"

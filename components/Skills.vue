@@ -14,7 +14,6 @@
         />
         <p>{{ skill.name }}</p>
       </li>
-      <div v-if="detail"> asdf </div>
     </ul>
   </section>
 </template>

@@ -23,22 +23,12 @@
               <div
                 class="lg:flex justify-between gap-10 lg:px-2 lg:mb-7 xl:mb-10"
               >
-                <p class="text-sm lg:text-base lg:w-1/2 whitespace-pre-wrap">
+                <p class="text-sm lg:text-base lg:w-1/2">
                   {{ modalContent?.description }}
                 </p>
 
                 <div class="lg:flex flex-col justify-between lg:w-1/2">
                   <div class="lg:mb-7">
-                    <div
-                      v-if="modalContent.highlights"
-                      class="mt-3 mb-3 lg:mt-0"
-                    >
-                      <p class="text-sm lg:text-base">Highlight(s):</p>
-                      <p class="flex flex-wrap text-sm lg:text-base">
-                        {{ modalContent.highlights }}
-                      </p>
-                    </div>
-
                     <div
                       v-if="modalContent.teamMembers.length > 0"
                       class="mt-3 mb-3 lg:mt-0"
@@ -66,14 +56,13 @@
                     </div>
 
                     <div class="mt-3 lg:mt-0">
-                      <p class="text-sm lg:text-base">Tech Stack:</p>
+                      <p class="text-sm lg:text-base">기술 스텍:</p>
                       <p class="flex flex-wrap">
                         <span
                           v-for="(tech, index) in modalContent?.techStack"
                           :key="tech"
-                          class="text-sm lg:text-base"
-                          >{{ tech
-                          }}<span
+                          class="rounded-full text-sm lg:text-base bg-gray-200 px-2 py-1 mr-1 mb-1"
+                          >{{ tech }}<span
                             v-if="index !== modalContent?.techStack.length - 1"
                             >&nbsp;&#183;&nbsp;</span
                           ></span
@@ -82,8 +71,8 @@
                     </div>
                   </div>
 
-                  <div class="flex items-center flex-wrap mt-3 lg:mt-0">
-                    <LinkIcon v-if="modalContent?.urls.length != 0" class="w-4 h-4 mr-1 text-gray-500" />
+                  <div v-if="modalContent?.urls.length" class="flex items-center flex-wrap mt-3 lg:mt-0">
+                    <LinkIcon class="w-4 h-4 mr-1 text-gray-500" />
                     <p
                       v-for="(url, index) in modalContent?.urls"
                       :key="url"

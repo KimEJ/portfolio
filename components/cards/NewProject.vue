@@ -54,7 +54,7 @@
           </div>
           <div class="project-links">
             <a
-              v-if="projectDetails.isUrl"
+              v-if="projectDetails.urlLink"
               :href="projectDetails.urlLink"
               target="blank"
               class="cursor-pointer"
@@ -71,6 +71,7 @@
               </svg>
             </a>
             <a
+            v-if="projectDetails.githubLink"
               class="mx-2"
               :href="projectDetails.githubLink"
               target="blank"
@@ -96,10 +97,10 @@
 <script setup>
 import { TransitionRoot } from "@headlessui/vue";
 const props = defineProps({
-  // isReverse: {
-  //   type: Boolean,
-  //   default: false,
-  // },
+  isReverse: {
+    type: Boolean,
+    default: false,
+  },
   projectDetails: {
     type: Object,
     default() {

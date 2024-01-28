@@ -7,7 +7,12 @@
   >
     <div class="lg:w-1/12">
       <Transition appear name="fadeIn">
-        <NuxtLink v-if="!loading" href="/" class="home-button" aria-label="YZ.">
+        <button
+          v-if="!loading"
+          type="button"
+          aria-label="Website Logo"
+          @click="goToHome"
+        >
           <img
             class="bg-white"
             :src="logo"
@@ -16,30 +21,31 @@
             alt="favicon"
             loading="lazy"
           />
-        </NuxtLink>
+        </button>
       </Transition>
     </div>
-    <div v-if="!loading" class="nav-links">
+    <div v-if="!loading && showNav" class="nav-links">
       <TransitionGroup appear @before-enter="before" @enter="entering">
-        <NuxtLink
+        <a
           v-for="(item, index) in navigation"
           :key="item.id"
-          :to="item.href"
+          :data-index="index"
+          :href="item.href"
           class="underAnimation"
-          >{{ item.name }}</NuxtLink
+          >{{ item.name }}</a
         >
       </TransitionGroup>
     </div>
     <div class="lg:w-1/12 flex items-center justify-end gap-4">
-      <!-- <div class="ml-5 flex items-center">
+      <div class="ml-5 flex items-center">
         <button type="button" aria-label="theme toggle" @click="toggleTheme()">
           <Transition name="fade" mode="out-in">
             <SunIcon v-if="!enabled" class="w-5 h-5" />
             <MoonIcon v-else class="w-5 h-5">Dark mode</MoonIcon>
           </Transition>
         </button>
-      </div> -->
-      <Menu as="div" class="mobile-hamburger">
+      </div>
+      <Menu v-if="showNav" as="div" class="mobile-hamburger">
         <div class="menu-button">
           <MenuButton aria-label="Menu">
             <Bars3Icon />
@@ -60,7 +66,7 @@
                 :key="item"
                 v-slot="{ active }"
               >
-                <NuxtLink
+                <a
                   :href="item.href"
                   :class="[
                     active ? 'bg-gray-500 text-white' : 'text-gray-900',
@@ -68,7 +74,7 @@
                   ]"
                 >
                   {{ item.name }}
-                </NuxtLink>
+                </a>
               </MenuItem>
             </div>
           </MenuItems>
@@ -96,19 +102,25 @@ useHead({
   ],
 });
 
+//props
+const props = defineProps({
+  showNav: {
+    type: Boolean,
+    default: true,
+  },
+});
+
 const { enabled, toggleTheme } = useTheme();
+let loading = ref(true);
 const route = useRoute();
 const { scrollTop } = useScrollToTop();
 const { trackNavBarPosition, currentOffsetHeight } = useTrackNavBar();
-const { trackTransitionCompleted, transitionCompletedOnce } =
-  useTransitionTracking();
 const { navigation } = useConstants();
-let loading = ref(transitionCompletedOnce.value ? false : true);
 const screenHeight = ref(0);
 const heightOfNav = ref(0);
 const currentScreenWidth = ref(0);
 const navBgTextColor = ref("bg-black text-white");
-const logo = ref(blackWhiteFavicon);
+const logo = ref(whiteBlackFavicon);
 
 const trackScroll = () => {
   trackNavBarPosition("nav-bar");
@@ -145,7 +157,7 @@ watchEffect(() => {
         screenHeight.value + heightOfNav.value / 2
       ) {
         // navbar style change on desktop view
-        navBgTextColor.value = "bg-white text-black dark:bg-[#121212]";
+        navBgTextColor.value = "bg-white text-black dark:bg-[#000]";
         logo.value = blackWhiteFavicon;
       } else {
         navBgTextColor.value = "bg-black text-white";
@@ -157,7 +169,7 @@ watchEffect(() => {
         screenHeight.value - heightOfNav.value / 2
       ) {
         // navbar style change on desktop view
-        navBgTextColor.value = "bg-white text-black dark:bg-[#121212]";
+        navBgTextColor.value = "bg-white text-black dark:bg-[#000]";
         logo.value = blackWhiteFavicon;
       } else {
         navBgTextColor.value = "bg-black text-white";
@@ -165,11 +177,11 @@ watchEffect(() => {
       }
     }
   } else {
-    navBgTextColor.value = "bg-white text-black dark:bg-[#344040]";
+    navBgTextColor.value = "bg-white text-black dark:bg-[#000]";
     logo.value = blackWhiteFavicon;
   }
   if (enabled.value) {
-    logo.value = blackWhiteFavicon;
+    logo.value = whiteBlackFavicon;
   }
 });
 onMounted(() => {
@@ -177,12 +189,10 @@ onMounted(() => {
   trackScroll();
   // use scroll event to update the current position of nav bar
   window.addEventListener("scroll", trackScroll);
-  const navigationBar = document.getElementById("nav-bar");
   screenHeight.value = window.innerHeight;
-  heightOfNav.value = navigationBar ? navigationBar.offsetHeight : 0;
+  heightOfNav.value = document.getElementById("nav-bar").offsetHeight;
   currentScreenWidth.value = window.innerWidth;
   loading.value = false;
-  trackTransitionCompleted();
 });
 </script>
 <style lang="scss" scoped>

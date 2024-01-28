@@ -4,5 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 </script>
 <template>
-  <NuxtPage />
+  <div>
+    <NuxtPage />
+  </div>
 </template>

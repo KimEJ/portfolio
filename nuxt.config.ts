@@ -2,8 +2,6 @@ import { defineNuxtConfig } from "nuxt/config";
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  theme: "dark",
-
   app: {
     head: {
       htmlAttrs: {
@@ -32,10 +30,10 @@ export default defineNuxtConfig({
           property: "og:site_name",
           content: "김어진의 포트폴리오",
         },
-        // {
-        //   property: "og:site",
-        //   content: "/",
-        // },
+        {
+          property: "og:site",
+          content: "https://kimej.github.io/portfolio/",
+        },
         {
           property: "og:title",
           content: "김어진의 포트폴리오",
@@ -59,24 +57,11 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", href: "/favicons/favicon.ico" }],
     },
   },
-
   modules: ["@nuxtjs/tailwindcss"],
-
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.scss",
   },
-
   build: {
     transpile: ["gsap", "@headlessui/vue", "@heroicons/vue"],
-  },
-
-  runtimeConfig: {
-    public: {
-      NUXT_GTM_ID: process.env.NUXT_GTM_ID,
-    },
-  },
-
-  devtools: {
-    enabled: true,
   },
 });
