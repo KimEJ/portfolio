@@ -290,7 +290,7 @@ export function useConstants() {
         },
         {
           image: {
-            src: "/portfolio/work/techplex/6G/interfaceCheck.png",
+            src: "/portfolio/work/techplex/6G/InterfaceCheck.png",
             alt: "6G interface check",
             width: "410",
             height: "117",
@@ -306,7 +306,7 @@ export function useConstants() {
             },
             {
               title: "인터페이스 체크 화면",
-              src: "/portfolio/work/techplex/6G/interfaceCheck.png",
+              src: "/portfolio/work/techplex/6G/InterfaceCheck.png",
               alt: "인터페이스 체크 화면",
               width: "800",
               height: "446",
