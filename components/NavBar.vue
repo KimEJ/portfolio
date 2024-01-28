@@ -157,7 +157,7 @@ watchEffect(() => {
         screenHeight.value + heightOfNav.value / 2
       ) {
         // navbar style change on desktop view
-        navBgTextColor.value = "bg-white text-black dark:bg-[#000]";
+        navBgTextColor.value = "bg-white text-black dark:bg-[#344040]";
         logo.value = blackWhiteFavicon;
       } else {
         navBgTextColor.value = "bg-black text-white";
@@ -169,7 +169,7 @@ watchEffect(() => {
         screenHeight.value - heightOfNav.value / 2
       ) {
         // navbar style change on desktop view
-        navBgTextColor.value = "bg-white text-black dark:bg-[#000]";
+        navBgTextColor.value = "bg-white text-black dark:bg-[#344040]";
         logo.value = blackWhiteFavicon;
       } else {
         navBgTextColor.value = "bg-black text-white";
@@ -177,7 +177,7 @@ watchEffect(() => {
       }
     }
   } else {
-    navBgTextColor.value = "bg-white text-black dark:bg-[#000]";
+    navBgTextColor.value = "bg-white text-black dark:bg-[#344040]";
     logo.value = blackWhiteFavicon;
   }
   if (enabled.value) {
