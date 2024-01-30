@@ -3,84 +3,84 @@ export function useConstants() {
     {
       id: 2,
       name: "스킬",
-      href: "/portfolio/#skills",
+      href: "/#skills",
     },
     {
       id: 6,
       name: "타임라인",
-      href: "/portfolio/#timeline",
+      href: "/#timeline",
     },
     {
       id: 3,
       name: "경력",
-      href: "/portfolio/#works",
+      href: "/#works",
     },
     {
       id: 4,
       name: "개인 프로젝트",
-      href: "/portfolio/#projects",
+      href: "/#projects",
     },
   ];
 
   const skillWithLogo = [
     {
-      imgUrl: "/portfolio/logos/vuejs-original.svg",
+      imgUrl: "/logos/vuejs-original.svg",
       name: "Vue",
       alt: "Vue logo",
       width: 150,
       height: 150,
     },
     {
-      imgUrl: "/portfolio/logos/nuxtjs-original.svg",
+      imgUrl: "/logos/nuxtjs-original.svg",
       name: "Nuxt",
       alt: "Nuxt logo",
       width: 150,
       height: 150,
     },
     {
-      imgUrl: "/portfolio/logos/tailwindcss-plain.svg",
+      imgUrl: "/logos/tailwindcss-plain.svg",
       name: "TailwindCSS",
       alt: "TailwindCSS logo",
       width: 150,
       height: 150,
     },
     {
-      imgUrl: "/portfolio/logos/firebase-plain.svg",
+      imgUrl: "/logos/firebase-plain.svg",
       name: "Firebase",
       alt: "Firebase logo",
       width: 150,
       height: 150,
     },
     {
-      imgUrl: "/portfolio/logos/typescript-original.svg",
+      imgUrl: "/logos/typescript-original.svg",
       name: "TypeScript",
       alt: "TypeScript logo",
       width: 150,
       height: 150,
     },
     {
-      imgUrl: "/portfolio/logos/nestjs-icon.svg",
+      imgUrl: "/logos/nestjs-icon.svg",
       name: "NestJS",
       alt: "NestJS logo",
       width: 150,
       height: 150,
     },
     {
-      imgUrl: "/portfolio/logos/git-original.svg",
+      imgUrl: "/logos/git-original.svg",
       name: "Git",
       alt: "Git logo",
       width: 150,
       height: 150,
     },
     {
-      imgUrl: "/portfolio/logos/nosql.svg",
+      imgUrl: "/logos/nosql.svg",
       name: "NoSQL",
       alt: "NoSQL logo",
       width: 150,
       height: 150,
     },
     {
-      imgUrl: "/portfolio/logos/graphql-icon.svg",
+      imgUrl: "/logos/graphql-icon.svg",
       name: "GraphQL",
       alt: "GraphQL logo",
       width: 150,
@@ -95,7 +95,7 @@ export function useConstants() {
       title: "Team Firewood",
       titleColor: "text-white",
       filterColor: "bg-slate-900 bg-opacity-60",
-      imageUrl: "/portfolio/project-ss/teamfirewood.png",
+      imageUrl: "/project-ss/teamfirewood.png",
       description: "사이드 프로젝트를 진행하는 팀인 '팀 파이어우드' 소개 페이지",
       techStack: ["NuxtJS", "TS", "TailwindCSS"],
       isUrl: true,
@@ -107,7 +107,7 @@ export function useConstants() {
       title: "iroun",
       titleColor: "text-white",
       filterColor: "bg-slate-900 bg-opacity-60",
-      imageUrl: "/portfolio/project-ss/iroun.png",
+      imageUrl: "/project-ss/iroun.png",
       description: "개발자들이 모여 봉사활동을 하는 봉사팀 '이로운' 소개 페이지",
       techStack: [
         "NuxtJS",
@@ -124,7 +124,7 @@ export function useConstants() {
       title: "WRaThioN",
       titleColor: "text-white",
       filterColor: "bg-slate-900 bg-opacity-60",
-      imageUrl: "/portfolio/project-ss/WRaThioN.png",
+      imageUrl: "/project-ss/WRaThioN.png",
       description:
         "비공식 파이썬 뤼튼(https://wrtn.ai/) 클라이언트",
       techStack: [
@@ -140,7 +140,7 @@ export function useConstants() {
       title: "바이오 헬스케어 플랫폼",
       titleColor: "text-white",
       filterColor: "bg-slate-900 bg-opacity-60",
-      imageUrl: "/portfolio/project-ss/leestech.png",
+      imageUrl: "/project-ss/leestech.png",
       description:
         "'팀 파이어우드'에서 개발한 바이오 헬스케어 단말을 관리하는 플랫폼",
       techStack: [
@@ -166,7 +166,7 @@ export function useConstants() {
       projects: [
         {
           image: {
-            src: "/portfolio/work/techplex/cm-tool/main.png",
+            src: "/work/techplex/cm-tool/main.png",
             alt: "cm tool",
             width: "410",
             height: "117",
@@ -175,7 +175,7 @@ export function useConstants() {
           imageShowcase: [
             {
               title: "메인 화면",
-              src: "/portfolio/work/techplex/cm-tool/main.png",
+              src: "/work/techplex/cm-tool/main.png",
               alt: "메인 화면",
               width: "800",
               height: "446",
@@ -194,7 +194,7 @@ export function useConstants() {
         },
         {
           image: {
-            src: "/portfolio/work/techplex/bike/web-main.png",
+            src: "/work/techplex/bike/web-main.png",
             alt: "bike app main",
             width: "410",
             height: "117",
@@ -203,28 +203,28 @@ export function useConstants() {
           imageShowcase: [
             {
               title: "시스템 개요",
-              src: "/portfolio/work/techplex/bike/overview.png",
+              src: "/work/techplex/bike/overview.png",
               alt: "시스템 개요",
               width: "800",
               height: "446",
             },
             {
               title: "앱 메인화면",
-              src: "/portfolio/work/techplex/bike/app-main.png",
+              src: "/work/techplex/bike/app-main.png",
               alt: "메인화면",
               width: "800",
               height: "446",
             },
             {
               title: "웹 메인화면",
-              src: "/portfolio/work/techplex/bike/web-main.png",
+              src: "/work/techplex/bike/web-main.png",
               alt: "메인화면",
               width: "800",
               height: "446"
             },
             {
               title: "웹 자전거 위치 상세화면",
-              src: "/portfolio/work/techplex/bike/web-gps.png",
+              src: "/work/techplex/bike/web-gps.png",
               alt: "위치 상세 화면",
               width: "800",
               height: "446"
@@ -245,7 +245,7 @@ export function useConstants() {
         },
         {
           image: {
-            src: "/portfolio/work/techplex/car-tracking/main.png",
+            src: "/work/techplex/car-tracking/main.png",
             alt: "car tracking system",
             width: "410",
             height: "117",
@@ -254,21 +254,21 @@ export function useConstants() {
           imageShowcase: [
             {
               title: "시스템 개요",
-              src: "/portfolio/work/techplex/car-tracking/overview.png",
+              src: "/work/techplex/car-tracking/overview.png",
               alt: "시스템 개요",
               width: "800",
               height: "446",
             },
             {
               title: "메인화면",
-              src: "/portfolio/work/techplex/car-tracking/main.png",
+              src: "/work/techplex/car-tracking/main.png",
               alt: "메인화면",
               width: "800",
               height: "446",
             },
             {
               title: "차량 운행 기록 화면",
-              src: "/portfolio/work/techplex/car-tracking/detail.png",
+              src: "/work/techplex/car-tracking/detail.png",
               alt: "차량 운행 기록 화면",
               width: "800",
               height: "404",
@@ -290,7 +290,7 @@ export function useConstants() {
         },
         {
           image: {
-            src: "/portfolio/work/techplex/6G/InterfaceCheck.png",
+            src: "/work/techplex/6G/InterfaceCheck.png",
             alt: "6G interface check",
             width: "410",
             height: "117",
@@ -299,28 +299,28 @@ export function useConstants() {
           imageShowcase: [
             {
               title: "시스템 개요",
-              src: "/portfolio/work/techplex/6G/overview.png",
+              src: "/work/techplex/6G/overview.png",
               alt: "시스템 개요",
               width: "800",
               height: "446",
             },
             {
               title: "인터페이스 체크 화면",
-              src: "/portfolio/work/techplex/6G/InterfaceCheck.png",
+              src: "/work/techplex/6G/InterfaceCheck.png",
               alt: "인터페이스 체크 화면",
               width: "800",
               height: "446",
             },
             {
               title: "파일 전송 테스트 화면",
-              src: "/portfolio/work/techplex/6G/FileSend.png",
+              src: "/work/techplex/6G/FileSend.png",
               alt: "파일 전송 테스트 화면",
               width: "800",
               height: "446",
             },
             {
               title: "전송 속도 테스트 화면",
-              src: "/portfolio/work/techplex/6G/RXTX.png",
+              src: "/work/techplex/6G/RXTX.png",
               alt: "전송 속도 테스트 화면",
               width: "800",
               height: "446",
@@ -349,7 +349,7 @@ export function useConstants() {
       projects: [
         {
           image: {
-            src: "/portfolio/work/interpass/app-store/main.png",
+            src: "/work/interpass/app-store/main.png",
             alt: "app store main",
             width: "410",
             height: "117",
@@ -358,14 +358,14 @@ export function useConstants() {
           imageShowcase: [
             {
               title: "메인 화면",
-              src: "/portfolio/work/interpass/app-store/main.png",
+              src: "/work/interpass/app-store/main.png",
               alt: "메인 화면",
               width: "800",
               height: "446",
             },
             {
               title: "앱 상세 화면",
-              src: "/portfolio/work/interpass/app-store/detail.png",
+              src: "/work/interpass/app-store/detail.png",
               alt: "앱 상세 화면",
               width: "800",
               height: "446",
@@ -382,7 +382,7 @@ export function useConstants() {
         },
         {
           image: {
-            src: "/portfolio/work/interpass/taxi-erp/main.png",
+            src: "/work/interpass/taxi-erp/main.png",
             alt: "taxi erp",
             width: "410",
             height: "117",
@@ -391,42 +391,42 @@ export function useConstants() {
           imageShowcase: [
             {
               title: "로그인 화면",
-              src: "/portfolio/work/interpass/taxi-erp/main.png",
+              src: "/work/interpass/taxi-erp/main.png",
               alt: "로그인 화면",
               width: "800",
               height: "446",
             },
             {
               title: "입출고 관리",
-              src: "/portfolio/work/interpass/taxi-erp/inout.png",
+              src: "/work/interpass/taxi-erp/inout.png",
               alt: "입출고 관리",
               width: "800",
               height: "446",
             },
             {
               title: "입출고 요청 관리",
-              src: "/portfolio/work/interpass/taxi-erp/request.png",
+              src: "/work/interpass/taxi-erp/request.png",
               alt: "입출고 요청 관리",
               width: "800",
               height: "446",
             },
             {
               title: "수리 관리",
-              src: "/portfolio/work/interpass/taxi-erp/fix.png",
+              src: "/work/interpass/taxi-erp/fix.png",
               alt: "수리 관리",
               width: "800",
               height: "446",
             },
             {
               title: "재고 관리",
-              src: "/portfolio/work/interpass/taxi-erp/stock.png",
+              src: "/work/interpass/taxi-erp/stock.png",
               alt: "재고 관리",
               width: "800",
               height: "446",
             },
             {
               title: "차량 관리",
-              src: "/portfolio/work/interpass/taxi-erp/taxi.png",
+              src: "/work/interpass/taxi-erp/taxi.png",
               alt: "차량 관리",
               width: "800",
               height: "446",
@@ -443,7 +443,7 @@ export function useConstants() {
         },
         {
           image: {
-            src: "/portfolio/work/interpass/bus-erp/main.png",
+            src: "/work/interpass/bus-erp/main.png",
             alt: "interpass",
             width: "410",
             height: "117",
@@ -452,28 +452,28 @@ export function useConstants() {
           imageShowcase: [
             {
               title: "시스템 개요",
-              src: "/portfolio/work/interpass/bus-erp/overview.png",
+              src: "/work/interpass/bus-erp/overview.png",
               alt: "시스템 개요",
               width: "800",
               height: "446",
             },
             {
               title: "로그인 화면",
-              src: "/portfolio/work/interpass/bus-erp/main.png",
+              src: "/work/interpass/bus-erp/main.png",
               alt: "로그인 화면",
               width: "800",
               height: "446",
             },
             {
               title: "대시보드",
-              src: "/portfolio/work/interpass/bus-erp/dashboard.png",
+              src: "/work/interpass/bus-erp/dashboard.png",
               alt: "대시보드",
               width: "800",
               height: "446",
             },
             {
               title: "업무 관리",
-              src: "/portfolio/work/interpass/bus-erp/service.png",
+              src: "/work/interpass/bus-erp/service.png",
               alt: "업무 관리",
               width: "800",
               height: "446",

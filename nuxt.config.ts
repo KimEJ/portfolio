@@ -46,7 +46,7 @@ export default defineNuxtConfig({
         // sharing thumbmail img
         {
           property: "og:image",
-          content: "/portfolio/favicons/favicon.ico",
+          content: "/favicons/favicon.ico",
         },
         // google site verification
         {
@@ -54,7 +54,7 @@ export default defineNuxtConfig({
           content: "", //TODO: add google site verification
         },
       ],
-      link: [{ rel: "icon", href: "/portfolio/favicons/favicon.ico" }],
+      link: [{ rel: "icon", href: "/favicons/favicon.ico" }],
     },
   },
   modules: ["@nuxtjs/tailwindcss"],

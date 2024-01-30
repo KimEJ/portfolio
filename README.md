@@ -1,5 +1,5 @@
 <div>
-    <img src="https://www.eazypau.com/favicon-bw.png" alt="favicon" width="100"/portfolio/>
+    <img src="https://portfolio-kimej.vercel.app/favicons/favicon.svg" alt="favicon" width="100"/>
 </div>
 
 # Personal Portfolio Website

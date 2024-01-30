@@ -158,7 +158,7 @@
           <div class="flex items-center justify-center lg:justify-end group">
             <div class="profile-img-container">
               <img
-                src="/portfolio/profile-pics/profile.webp"
+                src="/profile-pics/profile.webp"
                 width="350"
                 height="350"
                 alt="profile image"
