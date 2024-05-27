@@ -14,7 +14,7 @@
         :working-projects="workingProjects"
         :on-click-function="showModal"
       />
-      <div id="projects"></div>
+      <div id="projects" style="padding-bottom: 100px;"></div>
       <ProjectSection :projects="projects" />
     </div>
   </NuxtLayout>

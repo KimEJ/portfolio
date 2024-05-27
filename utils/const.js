@@ -518,6 +518,47 @@ export function useConstants() {
           techStack: ["NestJS", "TS", "GraphQL", "MySQL", "Vue", "Vuetify"],
           urls: [],
         },
+        {
+          image: {
+            src: "/work/interpass/taxi-tacho/1.png",
+            alt: "interpass",
+            width: "410",
+            height: "117",
+            maxWidth: "max-w-[60%] md:max-w-[50%] 3xl:max-w-[55%]",
+          },
+          imageShowcase: [
+            {
+              title: "로그인 화면",
+              src: "/work/interpass/taxi-tacho/1.png",
+              alt: "로그인 화면",
+              width: "800",
+              height: "446",
+            },
+            {
+              title: "운행집계",
+              src: "/work/interpass/taxi-tacho/2.png",
+              alt: "운행집계",
+              width: "800",
+              height: "446",
+            },
+            {
+              title: "운행 데이터",
+              src: "/work/interpass/taxi-tacho/3.png",
+              alt: "운행 데이터",
+              width: "1371",
+              height: "446",
+            },
+          ],
+          teamMembers: [],
+          heading: "택시 앱미터 관리 시스템",
+          description: 
+          "택시 앱미터 관리 시스템은 택시 앱미터를\n"+
+          "관리하는 시스템으로, 택시 앱미터의 운행\n"+
+          "데이터를 수집하고 관리하는 시스템이었습니다.\n\n"+
+          "저는 이 프로젝트에서 웹 개발을 담당했습니다.",
+          techStack: ["TS", "GraphQL", "Vue", "Nuxt"],
+          urls: [],
+        },
       ],
     }
   ];
