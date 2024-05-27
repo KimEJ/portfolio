@@ -508,7 +508,7 @@ export function useConstants() {
       date: "2022. 08",
       title: "인터패스 입사",
       description:
-        "인터패스에서 node.js와 mysql기반의 백엔드 개발자로서의 경험과 기술을 다듬었습니다.",
+        "인터패스에서 node.js와 mysql기반의 백엔드 개발자로서의 경험과 기술을 키웠습니다.",
       // link: {
       //   text: "홈페이지",
       //   url: "https://www.interpark.com/",
