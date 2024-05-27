@@ -71,7 +71,7 @@
                     </div>
                   </div>
 
-                  <div v-if="modalContent?.urls.length" class="flex items-center flex-wrap mt-3 lg:mt-0">
+                  <div v-if="modalContent?.urls?.length" class="flex items-center flex-wrap mt-3 lg:mt-0">
                     <LinkIcon class="w-4 h-4 mr-1 text-gray-500" />
                     <p
                       v-for="(url, index) in modalContent?.urls"

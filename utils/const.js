@@ -103,39 +103,6 @@ export function useConstants() {
       // githubLink: "https://github.com/eazypau/my-blog",
     },
     {
-      isReverse: true,
-      title: "iroun",
-      titleColor: "text-white",
-      filterColor: "bg-slate-900 bg-opacity-60",
-      imageUrl: "/project-ss/iroun.png",
-      description: "개발자들이 모여 봉사활동을 하는 봉사팀 '이로운' 소개 페이지",
-      techStack: [
-        "NuxtJS",
-        "TS",
-        "TailwindCSS",
-        "Firebase",
-      ],
-      isUrl: true,
-      urlLink: "https://iroun.org/",
-      githubLink: "https://github.com/KimEJ/iroun.git",
-    },
-    {
-      isReverse: false,
-      title: "WRaThioN",
-      titleColor: "text-white",
-      filterColor: "bg-slate-900 bg-opacity-60",
-      imageUrl: "/project-ss/WRaThioN.png",
-      description:
-        "비공식 파이썬 뤼튼(https://wrtn.ai/) 클라이언트",
-      techStack: [
-        "Python3",
-        "pyjwt"
-      ],
-      isUrl: false,
-      // urlLink: "https://eazy-chat-app.netlify.app/login",
-      githubLink: "https://github.com/KimEJ/WRaThioN",
-    },
-    {
       isReverse: false,
       title: "바이오 헬스케어 플랫폼",
       titleColor: "text-white",
@@ -155,7 +122,69 @@ export function useConstants() {
       isUrl: false,
       // urlLink: "https://eazy-chat-app.netlify.app/login",
       // githubLink: "https://github.com/KimEJ/WRaThioN",
-    }
+    },
+    {
+      isReverse: true,
+      title: "iroun",
+      titleColor: "text-white",
+      filterColor: "bg-slate-900 bg-opacity-60",
+      imageUrl: "/project-ss/iroun.png",
+      description: "개발자들이 모여 봉사활동을 하는 봉사팀 '이로운' 소개 페이지",
+      techStack: [
+        "NuxtJS",
+        "TS",
+        "TailwindCSS",
+        "Firebase",
+      ],
+      isUrl: true,
+      urlLink: "https://iroun.org/",
+      githubLink: "https://github.com/KimEJ/iroun.git",
+    },
+    {
+      isReverse: true,
+      title: "이로운 교육봉사",
+      titleColor: "text-white",
+      filterColor: "bg-slate-900 bg-opacity-60",
+      imageUrl: "/project-ss/iroun-edu.jpeg",
+      description:
+        "이로운에서 진행하는 교육봉사 프로젝트",
+      techStack: [ "computer science", "python", "엔트리" ],
+      isUrl: false,
+      // urlLink: "https://abyssal.kr/",
+    },
+    {
+      isReverse: false,
+      title: "WRaThioN",
+      titleColor: "text-white",
+      filterColor: "bg-slate-900 bg-opacity-60",
+      imageUrl: "/project-ss/WRaThioN.png",
+      description:
+        "비공식 파이썬 뤼튼(https://wrtn.ai/) 클라이언트",
+      techStack: [
+        "Python3",
+        "pyjwt"
+      ],
+      isUrl: false,
+      // urlLink: "https://eazy-chat-app.netlify.app/login",
+      githubLink: "https://github.com/KimEJ/WRaThioN",
+    },
+    {
+      isReverse: true,
+      title: "Abyssal Aerospace",
+      titleColor: "text-white",
+      filterColor: "bg-slate-900 bg-opacity-60",
+      imageUrl: "/project-ss/abyssal.png",
+      description:
+        "어비셜 팀에서 진행한 항공우주 프로젝트 소개 페이지",
+      techStack: [
+        "React",
+        "TS",
+        "TailwindCSS",
+        "vercel",
+      ],
+      isUrl: true,
+      urlLink: "https://abyssal.kr/",
+    },
   ];
 
   const workingProjects = [
