@@ -97,7 +97,7 @@ export function useConstants() {
       filterColor: "bg-slate-900 bg-opacity-60",
       imageUrl: "/project-ss/teamfirewood.png",
       description: "사이드 프로젝트를 진행하는 팀인 '팀 파이어우드' 소개 페이지",
-      techStack: ["NuxtJS", "TS", "TailwindCSS"],
+      techStack: ["NextJS", "TS", "TailwindCSS"],
       isUrl: true,
       urlLink: "https://tfw.kr/",
       // githubLink: "https://github.com/eazypau/my-blog",
