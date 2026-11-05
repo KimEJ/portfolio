@@ -1,0 +1,9 @@
+name: "김어진"
+headline: "AI 서비스와 운영 플랫폼을 만드는 백엔드 개발자"
+intro: "8년 동안 IoT 단말 관제에서 시작해 10만 대 규모 교통 단말 운영 플랫폼을 거쳐, 최근까지 RAG와 문서 AI 서비스를 만들었습니다. 기능 하나를 만들 때도 배포, 모니터링, 그리고 실패했을 때 어떻게 동작해야 하는지를 같이 설계합니다. 업무 밖에서는 macOS·iOS 네이티브 앱과 로컬에서 돌아가는 AI 도구를 만듭니다."
+location: "서울"
+email: "kimuj5090@gmail.com"
+links: [{"label": "GitHub", "url": "https://github.com/KimEJ"}, {"label": "블로그", "url": "https://KimEJ.github.io"}]
+skills: [{"group": "Backend", "items": ["NestJS", "FastAPI", "Spring Boot", "Node.js", "Python", "Java", "TypeScript"]}, {"group": "AI", "items": ["RAG", "pgvector", "Gemini / OpenAI", "Document AI · OCR", "llama.cpp", "MCP"]}, {"group": "Data", "items": ["PostgreSQL", "MySQL · MariaDB", "MongoDB", "Redis", "SQLite"]}, {"group": "Infra", "items": ["Docker", "Azure · Bicep", "AWS ECS", "Naver Cloud", "NGINX", "systemd"]}, {"group": "클라이언트", "items": ["Vue", "React · Next.js", "Swift · SwiftUI", "Metal", "Electron", "Expo"]}, {"group": "Embedded · IoT", "items": ["C", "Embedded Linux", "LwM2M"]}]
+education: [{"school": "한양사이버대학교", "major": "응용소프트웨어공학과", "period": {"start": "2023-03"}, "status": "재학 중"}, {"school": "대덕소프트웨어마이스터고등학교", "major": "임베디드 SW", "period": {"start": "2016-03", "end": "2019-02"}, "status": "졸업"}]
+certifications: [{"date": "2017-12", "title": "ISTQB Certified Tester", "issuer": "ISTQB"}, {"date": "2017-11", "title": "농업핀테크 아이디어톤 대상", "issuer": "NH농협은행"}, {"date": "2016-09", "title": "정보처리기능사", "issuer": "한국산업인력공단"}]

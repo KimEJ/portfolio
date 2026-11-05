@@ -1,33 +1,35 @@
 {
+  "name": "portfolio",
   "private": true,
-  "name": "porfolio",
-  "author": {
-    "name": "KimEoJin",
-    "url": "https://portfolio-kimej.vercel.app/"
-  },
+  "type": "module",
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
     "generate": "nuxi generate",
-    "start": "node .output/server/index.mjs",
-    "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore ."
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "^1.0.8",
-    "@nuxtjs/tailwindcss": "^6.8.0",
-    "eslint": "^8.49.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-vue": "^9.17.0",
-    "nuxt": "^3.7.3",
-    "prettier": "^3.0.3",
-    "sass": "^1.67.0",
-    "sass-loader": "^13.3.2"
+    "lint": "eslint .",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.16",
-    "@heroicons/vue": "^2.0.18",
-    "gsap": "^3.12.2"
+    "@fontsource/atkinson-hyperlegible": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@nuxt/content": "^3.16.2",
+    "@nuxtjs/i18n": "^10.6.0",
+    "@nuxtjs/sitemap": "^9.1.0",
+    "better-sqlite3": "^12.0.0",
+    "nuxt": "^4.6.4",
+    "pretendard": "^1.3.9",
+    "tailwindcss": "^4.0.0",
+    "vue": "^3.5.0",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.17.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.28.0",
+    "eslint": "^10.4.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0",
+    "vue-tsc": "^3.0.0"
   }
 }

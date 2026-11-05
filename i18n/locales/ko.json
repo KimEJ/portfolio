@@ -1,0 +1,103 @@
+{
+  "home": "홈",
+  "projects": "프로젝트",
+  "archive": "아카이브",
+  "career": "경력",
+  "portfolio": "포트폴리오",
+  "siteOwner": "김어진",
+  "ogLocale": "ko_KR",
+  "archiveDescription": "2018–2024년의 회사 업무와 작은 개인 프로젝트",
+  "error": "오류",
+  "errorDescription": "페이지를 표시할 수 없습니다.",
+  "notFound": "찾으시는 편이 없습니다.",
+  "backHome": "출발 안내판으로",
+  "navigation": "주 메뉴",
+  "language": "언어",
+  "skip": "본문으로 건너뛰기",
+  "nav": {
+    "departures": "출발",
+    "departuresSub": "프로젝트",
+    "itinerary": "여정",
+    "itinerarySub": "경력",
+    "arrivals": "도착",
+    "arrivalsSub": "아카이브",
+    "info": "안내",
+    "infoSub": "연락"
+  },
+  "board": {
+    "departures": "출발",
+    "arrivals": "도착",
+    "departuresSub": "Departures",
+    "arrivalsSub": "Arrivals",
+    "flight": "편명",
+    "destination": "목적지",
+    "time": "출발",
+    "arrivedAt": "도착",
+    "gate": "탑승구",
+    "status": "상태",
+    "featured": "대표 프로젝트",
+    "company": "회사 프로젝트"
+  },
+  "checkin": {
+    "title": "체크인",
+    "main": "주력",
+    "recent": "분야",
+    "contact": "연락",
+    "mainValue": "NestJS · FastAPI · Spring",
+    "recentValue": "RAG · 문서 AI · MCP",
+    "career": "경력",
+    "careerValue": "백엔드 8년",
+    "last": "최근"
+  },
+  "gates": {
+    "title": "탑승구 미리보기",
+    "sub": "Gate view"
+  },
+  "itinerary": {
+    "title": "여정",
+    "sub": "Itinerary",
+    "pass": "탑승권",
+    "passenger": "탑승객",
+    "present": "현재",
+    "class": "직무",
+    "classValue": "백엔드",
+    "years": "경력",
+    "yearsValue": "8년",
+    "edu": "학력"
+  },
+  "stack": {
+    "title": "기술 스택",
+    "sub": "Carry-on"
+  },
+  "credentials": {
+    "title": "학력 · 자격",
+    "sub": "Documents"
+  },
+  "contact": {
+    "label": "안내 데스크",
+    "lead": "프로젝트, 협업, 채용 문의는 메일로 연락 주세요.",
+    "github": "GitHub"
+  },
+  "project": {
+    "flight": "편명",
+    "period": "기간",
+    "gate": "탑승구",
+    "seat": "역할",
+    "class": "구분",
+    "status": "상태",
+    "stack": "기술",
+    "links": "링크",
+    "gallery": "수하물 수취대",
+    "gallerySub": "Screens",
+    "prev": "이전 편",
+    "next": "다음 편"
+  },
+  "kind": {
+    "personal": "개인",
+    "company": "회사",
+    "client": "고객사"
+  },
+  "footer": {
+    "rights": "김어진"
+  }
+}

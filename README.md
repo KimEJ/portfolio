@@ -1,54 +1,34 @@
-<div>
-    <img src="https://portfolio-kimej.vercel.app/favicons/favicon.svg" alt="favicon" width="100"/>
-</div>
+# Portfolio
 
-# Personal Portfolio Website
+A static portfolio built with Nuxt 4, TypeScript, Nuxt Content v3, Nuxt i18n, and Tailwind CSS v4. It targets Vercel and uses npm.
 
-A personal porfolio website built with Nuxt3 and tailwindCSS
+## Scripts
 
-## Technologies used
-
-- [Nuxt 3](https://v3.nuxtjs.org/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Heroicons](https://vue-hero-icons.netlify.app/)
-- [Headlessui/vue](https://headlessui.dev/)
-- [Eslint](https://eslint.org/)
-- [GSAP](https://greensock.com/docs/v3/GSAP)
-- [SASS](https://sass-lang.com/)
-
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and preview
-$ npm run build
-$ npm run start
-
+```sh
+npm install
+npm run dev       # local development
+npm run lint      # ESLint
+npm run build     # production server build
+npx nuxi typecheck
+npm run generate  # static output in .output/public
 ```
 
-## Deployment
+Set `NUXT_PUBLIC_SITE_URL` to the deployed site URL when generating; it defaults to `https://portfolio-kimej.vercel.app`.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://www.netlify.com/)
+## Content
 
-## Tools, Resources and References
+```text
+content/
+  ko/                        en/
+    profile.yml                profile.yml
+    projects/<slug>.md         projects/<slug>.md
+    career/<slug>.md           career/<slug>.md
+```
 
-- [Favicon Generator](https://favicon.io/favicon-generator/)
-- [Resume maker](https://resumake.io/)
-- [Image file extension converter](https://convertio.co/jpg-webp/)
-- [Coolors - Trending Color Palettes](https://coolors.co/palettes/trending)
-- [How to trigger a file download when clicking an HTML button or JavaScript](https://www.geeksforgeeks.org/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript/)
-- [Stagger animation using GSAP in Vuejs | Vue animation](https://www.youtube.com/watch?v=qk7Xj4Q0IuE&ab_channel=TheDevEnv)
-- [Web Design for Web Developers: Build Beautiful Websites!](https://www.udemy.com/course/web-design-secrets/)
-- [Learn our UX/UI process - Real client project](https://www.youtube.com/watch?v=gRqHEjATSCE&ab_channel=Malewicz)
-- [Beautiful, High-Resolution No Cost Stock Images](https://negativespace.co/)
-- [15 Web Developer Portfolios to Inspire You](https://www.freecodecamp.org/news/15-web-developer-portfolios-to-inspire-you-137fb1743cae/)
-- [How to create theme toggle composable](https://github.com/adityar15/nuxt3socket/blob/master/composables/useTheme.ts)
+Content v3 uses separate collections per locale with shared schemas, following its i18n integration guidance. Missing localized entries fall back to Korean. Project and career slugs should match across locales.
 
-## Remarks
+To add a project, create a Markdown file under `content/ko/projects/` with frontmatter matching the project schema in `content.config.ts`; add the same slug under `content/en/projects/` when translated. Project pages are generated for each locale.
 
-- Please remove my Google Analytic Script before using this project.
+## Add a locale
+
+Add the locale to the `contentLocales` array in `locales.ts`, create its translation file, and add localized content under `content/<locale>/`. The array drives i18n, collections, and routes. Existing Korean entries serve as fallbacks when translations are missing.

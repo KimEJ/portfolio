@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
+@import "@fontsource/atkinson-hyperlegible/400.css";
+@import "@fontsource/atkinson-hyperlegible/700.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "@fontsource/jetbrains-mono/700.css";
+
+/* Terminal at night: dark concourse, amber flap boards, one yellow wayfinding sign for the action. */
+@theme {
+  --color-concourse: #0a0c0f;
+  --color-concourse-2: #101318;
+  --color-board: #13171c;
+  --color-board-2: #1a1f25;
+  --color-cell: #20262d;
+  --color-seam: #262d35;
+  --color-ink: #eceff2;
+  --color-ink-2: #a3acb5;
+  --color-ink-3: #78828c;
+  --color-flap: #f7c548;
+  --color-sign: #ffcd00;
+  --color-sign-ink: #0a0c0f;
+  --color-go: #46d98a;
+  --color-wait: #f7c548;
+  --color-hold: #a3acb5;
+  --color-paper: #f3f1ec;
+  --color-paper-ink: #15181b;
+  --color-paper-ink-2: #555b61;
+  --color-paper-rule: #d9d5cc;
+
+  --font-sans: "Pretendard Variable", Pretendard, "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-latin: "Atkinson Hyperlegible", "Pretendard Variable", Pretendard, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-concourse);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color-scheme: dark;
+    scrollbar-color: var(--color-seam) var(--color-concourse);
+  }
+  :lang(ko) { word-break: keep-all; }
+  ::selection { background: var(--color-sign); color: var(--color-sign-ink); }
+  :focus-visible { outline: 3px solid var(--color-sign); outline-offset: 3px; border-radius: 4px; }
+  a { text-underline-offset: 0.22em; }
+  h1, h2, h3 { text-wrap: balance; }
+  code { font-family: var(--font-mono); font-size: 0.92em; }
+}
+
+@layer components {
+  .wrap { width: 100%; max-width: 1280px; margin-inline: auto; padding-inline: clamp(18px, 4vw, 40px); }
+  .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .latin { font-family: var(--font-latin); }
+  .tone-go { color: var(--color-go); }
+  .tone-wait { color: var(--color-wait); }
+  .tone-hold { color: var(--color-hold); }
+  .status-dot { display: inline-flex; align-items: center; gap: 0.55em; font-weight: 700; white-space: nowrap; }
+  .status-dot::before { content: ""; width: 0.6em; height: 0.6em; border-radius: 50%; background: currentColor; flex: none; }
+  .status-dot.tone-wait::before { animation: ej-blink 1.6s steps(2) infinite; }
+  .sec-title { display: flex; align-items: center; gap: 14px; }
+  .sec-title .pict { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 6px; background: var(--color-sign); color: var(--color-sign-ink); font-size: 24px; flex: none; }
+  .sec-title h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 800; letter-spacing: -0.03em; }
+  .sec-title > div { display: flex; flex-direction: row-reverse; justify-content: flex-end; align-items: baseline; flex-wrap: wrap; column-gap: 12px; }
+  .sec-title small { display: block; font-family: var(--font-latin); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-ink-3); font-weight: 700; }
+}
+
+@keyframes ej-blink { 50% { opacity: 0.25; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

@@ -1,67 +1,37 @@
-import { defineNuxtConfig } from "nuxt/config";
+import { readdirSync, existsSync } from 'node:fs'
+import { join } from 'node:path'
+import tailwindcss from '@tailwindcss/vite'
+import { contentLocales } from './locales'
 
-// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'https://portfolio-kimej.vercel.app'
+const slugs = new Set<string>()
+for (const locale of contentLocales) {
+  const directory = join(process.cwd(), 'content', locale, 'projects')
+  if (existsSync(directory)) {
+    for (const file of readdirSync(directory)) {
+      if (file.endsWith('.md')) slugs.add(file.slice(0, -3))
+    }
+  }
+}
+const projectRoutes = contentLocales.flatMap(locale =>
+  [...slugs].map(slug => `${locale === 'ko' ? '' : `/${locale}`}/projects/${slug}`),
+)
+
 export default defineNuxtConfig({
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: "ko",
-      },
-      title: "김어진의 포트폴리오",
-      meta: [
-        {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1, viewport-fit=cover",
-        },
-        {
-          name: "description",
-          content:
-            "김어진의 개인 포트폴리오 웹 사이트",
-        },
-        { name: "format-detection", content: "telephone=no" },
-        { property: "author", content: "Kim Eo Jin" },
-        {
-          name: "keywords",
-          content:
-            "Web Developer, Front End Developer, Frontend Developer, Junior Web Developer, Software Developer, Software Engineer",
-        },
-        // social meta tags
-        {
-          property: "og:site_name",
-          content: "김어진의 포트폴리오",
-        },
-        {
-          property: "og:site",
-          content: "https://portfolio-kimej.vercel.app/",
-        },
-        {
-          property: "og:title",
-          content: "김어진의 포트폴리오",
-        },
-        {
-          property: "og:description",
-          content:
-            "김어진의 개인 포트폴리오 웹 사이트",
-        },
-        // sharing thumbmail img
-        {
-          property: "og:image",
-          content: "/favicons/favicon.ico",
-        },
-        // google site verification
-        {
-          name: "google-site-verification",
-          content: "", //TODO: add google site verification
-        },
-      ],
-      link: [{ rel: "icon", href: "/favicons/favicon.ico" }],
-    },
+  compatibilityDate: '2026-11-05',
+  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxtjs/sitemap', '@nuxt/eslint'],
+  css: ['~/assets/css/main.css'],
+  vite: { plugins: [tailwindcss()] },
+  runtimeConfig: { public: { siteUrl } },
+  site: { url: siteUrl },
+  i18n: {
+    baseUrl: siteUrl,
+    locales: contentLocales.map(code => ({ code, language: code, file: `${code}.json` })),
+    defaultLocale: 'ko',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: { useCookie: true, cookieKey: 'i18n_redirected', redirectOn: 'root' },
   },
-  modules: ["@nuxtjs/tailwindcss"],
-  tailwindcss: {
-    cssPath: "~/assets/css/tailwind.scss",
-  },
-  build: {
-    transpile: ["gsap", "@headlessui/vue", "@heroicons/vue"],
-  },
-});
+  nitro: { prerender: { routes: projectRoutes } },
+  sitemap: { urls: projectRoutes },
+  app: { head: { link: [{ rel: 'icon', href: '/favicons/favicon.ico' }] } },
+})

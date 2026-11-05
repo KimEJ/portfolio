@@ -1,0 +1,103 @@
+{
+  "home": "Home",
+  "projects": "Projects",
+  "archive": "Archive",
+  "career": "Career",
+  "portfolio": "Portfolio",
+  "siteOwner": "Eojin Kim",
+  "ogLocale": "en_US",
+  "archiveDescription": "Company work from 2018–2024 and small personal projects",
+  "error": "Error",
+  "errorDescription": "This page could not be displayed.",
+  "notFound": "No such flight.",
+  "backHome": "Back to departures",
+  "navigation": "Main menu",
+  "language": "Language",
+  "skip": "Skip to content",
+  "nav": {
+    "departures": "Departures",
+    "departuresSub": "Projects",
+    "itinerary": "Itinerary",
+    "itinerarySub": "Career",
+    "arrivals": "Arrivals",
+    "arrivalsSub": "Archive",
+    "info": "Info",
+    "infoSub": "Contact"
+  },
+  "board": {
+    "departures": "Departures",
+    "arrivals": "Arrivals",
+    "departuresSub": "출발",
+    "arrivalsSub": "도착",
+    "flight": "Flight",
+    "destination": "Destination",
+    "time": "Since",
+    "arrivedAt": "Year",
+    "gate": "Gate",
+    "status": "Status",
+    "featured": "Featured",
+    "company": "Company work"
+  },
+  "checkin": {
+    "title": "Check-in",
+    "main": "Core",
+    "recent": "Focus",
+    "contact": "Contact",
+    "mainValue": "NestJS · FastAPI · Spring",
+    "recentValue": "RAG · Document AI · MCP",
+    "career": "Career",
+    "careerValue": "Backend, 8 years",
+    "last": "Latest"
+  },
+  "gates": {
+    "title": "Gate view",
+    "sub": "Screens"
+  },
+  "itinerary": {
+    "title": "Itinerary",
+    "sub": "Career",
+    "pass": "Boarding pass",
+    "passenger": "Passenger",
+    "present": "now",
+    "class": "Role",
+    "classValue": "Backend",
+    "years": "Years",
+    "yearsValue": "8",
+    "edu": "Education"
+  },
+  "stack": {
+    "title": "Stack",
+    "sub": "Carry-on"
+  },
+  "credentials": {
+    "title": "Education & certificates",
+    "sub": "Documents"
+  },
+  "contact": {
+    "label": "Information desk",
+    "lead": "For projects, collaboration, or hiring, email me.",
+    "github": "GitHub"
+  },
+  "project": {
+    "flight": "Flight",
+    "period": "Period",
+    "gate": "Gate",
+    "seat": "Role",
+    "class": "Type",
+    "status": "Status",
+    "stack": "Stack",
+    "links": "Links",
+    "gallery": "Baggage claim",
+    "gallerySub": "Screens",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "kind": {
+    "personal": "Personal",
+    "company": "Company",
+    "client": "Client"
+  },
+  "footer": {
+    "rights": "Eojin Kim"
+  }
+}

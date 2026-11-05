@@ -1,0 +1,9 @@
+name: "Eojin Kim"
+headline: "Backend engineer building AI services and the platforms that keep them running"
+intro: "Eight years of building backends: remote management for IoT devices, an operations platform for about 100,000 taxi and bus terminals, and most recently RAG and document-AI services. Whenever I build a feature, I design how it ships, how it is monitored, and how it should behave when it fails. Outside work I build native macOS and iOS apps and AI tools that run entirely on-device."
+location: "Seoul, Korea"
+email: "kimuj5090@gmail.com"
+links: [{"label": "GitHub", "url": "https://github.com/KimEJ"}, {"label": "Blog", "url": "https://KimEJ.github.io"}]
+skills: [{"group": "Backend", "items": ["NestJS", "FastAPI", "Spring Boot", "Node.js", "Python", "Java", "TypeScript"]}, {"group": "AI", "items": ["RAG", "pgvector", "Gemini / OpenAI", "Document AI · OCR", "llama.cpp", "MCP"]}, {"group": "Data", "items": ["PostgreSQL", "MySQL · MariaDB", "MongoDB", "Redis", "SQLite"]}, {"group": "Infra", "items": ["Docker", "Azure · Bicep", "AWS ECS", "Naver Cloud", "NGINX", "systemd"]}, {"group": "Clients", "items": ["Vue", "React · Next.js", "Swift · SwiftUI", "Metal", "Electron", "Expo"]}, {"group": "Embedded · IoT", "items": ["C", "Embedded Linux", "LwM2M"]}]
+education: [{"school": "Hanyang Cyber University", "major": "Applied Software Engineering", "period": {"start": "2023-03"}, "status": "Enrolled"}, {"school": "Daedeok Software Meister High School", "major": "Embedded Software", "period": {"start": "2016-03", "end": "2019-02"}, "status": "Graduated"}]
+certifications: [{"date": "2017-12", "title": "ISTQB Certified Tester", "issuer": "ISTQB"}, {"date": "2017-11", "title": "Grand Prize, Agri-Fintech Ideathon", "issuer": "NH NongHyup Bank"}, {"date": "2016-09", "title": "Craftsman Information Processing", "issuer": "HRD Korea"}]
