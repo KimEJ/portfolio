@@ -64,7 +64,8 @@ defineExpose({ play })
 </script>
 
 <template>
-  <span class="flap" :aria-label="text" role="text">
+  <span class="flap">
+    <span class="sr">{{ text }}</span>
     <span
       v-for="(cell, i) in cells"
       :key="i"
@@ -72,11 +73,11 @@ defineExpose({ play })
       :class="{ blank: cell.cur === ' ' }"
       aria-hidden="true"
     >
-      <span class="h top"><b>{{ cell.cur }}</b></span>
-      <span class="h bot"><b>{{ cell.prev }}</b></span>
+      <span class="h top"><b :data-c="cell.cur" /></span>
+      <span class="h bot"><b :data-c="cell.prev" /></span>
       <template v-if="cell.n">
-        <span :key="`t${cell.n}`" class="h top leaf"><b>{{ cell.prev }}</b></span>
-        <span :key="`b${cell.n}`" class="h bot leaf2"><b>{{ cell.cur }}</b></span>
+        <span :key="`t${cell.n}`" class="h top leaf"><b :data-c="cell.prev" /></span>
+        <span :key="`b${cell.n}`" class="h bot leaf2"><b :data-c="cell.cur" /></span>
       </template>
     </span>
   </span>
@@ -104,6 +105,9 @@ defineExpose({ play })
 .top { top: 0; border-radius: 3px 3px 0 0; transform-origin: 50% 100%; }
 .bot { bottom: 0; border-radius: 0 0 3px 3px; transform-origin: 50% 0; background: color-mix(in oklab, var(--flap-bg, var(--color-cell)) 88%, white); }
 .h b { position: absolute; left: 0; right: 0; height: 200%; display: grid; place-items: center; line-height: 1; font-weight: inherit; }
+.h b::before { content: attr(data-c); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.flap { position: relative; }
 .top b { top: 0; }
 .bot b { bottom: 0; }
 .leaf { z-index: 2; animation: fold-top 75ms ease-in forwards; }
