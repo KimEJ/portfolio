@@ -4,7 +4,7 @@ tier: "archive"
 order: 113
 title: "6G Base Station Test System"
 summary: "Desktop app for testing and monitoring partner 6G base stations on a testbed"
-period: {"start": "2018-10", "end": "2022-07"}
+period: {"start": "2021-04", "end": "2022-07"}
 role: "Desktop app"
 stack: ["Electron", "Vue", "TypeScript"]
 platforms: ["desktop"]
@@ -15,4 +15,14 @@ code: "EJ913"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-Built the Electron program for testing a partner's 6G base stations on our testbed and monitoring the results.
+## Problem
+
+Testing a partner's 6G base stations on a testbed required a tool for checking interfaces and data transmission status.
+
+## What I built
+
+I built an Electron desktop application to run testbed tests and inspect results, including interface checks, file transfer tests, and send and receive throughput tests.
+
+## Architecture
+
+The desktop app connects to a server over TCP, and the server communicates with the testbed.

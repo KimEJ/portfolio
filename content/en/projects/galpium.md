@@ -11,7 +11,7 @@ platforms: ["macos"]
 cover: "/projects/galpium/wiki-page.jpg"
 images: [{"src": "/projects/galpium/wiki-page.jpg", "alt": "Wiki page editor"}, {"src": "/projects/galpium/materials.jpg", "alt": "Source materials and citations"}]
 links: [{"label": "GitHub", "url": "https://github.com/KimEJ/Galpium"}, {"label": "Release v0.0.2", "url": "https://github.com/KimEJ/Galpium/releases/tag/v0.0.2"}]
-metrics: [{"value": "0", "label": "third-party Swift packages"}, {"value": "93", "label": "tests"}, {"value": "3", "label": "UI languages (ko·en·ja)"}]
+metrics: [{"value": "4 material types", "label": "Text, PDF, images, audio"}, {"value": "2 search methods", "label": "Keyword and semantic search"}, {"value": "3 UI languages", "label": "Korean, English, Japanese"}]
 code: "EJ101"
 status: {"label": "Released v0.0.2", "tone": "go"}
 ---
@@ -22,19 +22,13 @@ When you organize notes with an AI, the results end up scattered across chat thr
 
 ## What I built
 
-A macOS app that keeps Markdown pages, original materials (PDF, image, audio), and citations in one library. It ships an MCP stdio server so ChatGPT desktop can read and edit the same wiki the user does.
-
-- **GalpiumCore**: storage, citations, revisions, retrieval, MCP protocol
-- **GalpiumApp**: SwiftUI with an AppKit/TextKit editor
-- **GalpiumEmbedder**: one embedding worker per library, reachable only over a user-only Unix socket
+A macOS app that keeps Markdown pages, original materials, citations, and revision history in one local library. Users can link pages and search their materials by keyword or meaning. An MCP server lets AI clients such as ChatGPT desktop read and edit the same wiki.
 
 ## Design decisions
 
-- **Zero third-party Swift packages.** System SQLite only, which keeps the build and supply chain simple.
-- **No silent overwrites.** The app and the AI can edit the same page, so every write must carry an `expected_revision`.
-- **Isolated embedding caches.** The cache is namespaced by model and preprocessing version, so incompatible vectors never mix.
-- **Memory discipline.** The multimodal runtime unloads once the index queue drains, and the worker exits after 60 seconds idle.
-- **Verifiable citations.** Citations are checked against the source hash and extraction location. Image and audio hits are shown as locations, not quotes.
+- **Preserving sources and citations.** Original materials are kept separately, and citation footnotes link back to the relevant passage. Image and audio search hits are shown as locations rather than verified quotations.
+- **Protecting concurrent edits.** When the app and AI edit the same page, the current revision is checked to prevent either from silently overwriting the other's changes.
+- **Local search and resource management.** Keyword and semantic search run on the device. Embedding work runs in a separate worker to reduce memory use when idle.
 
 ## Status
 

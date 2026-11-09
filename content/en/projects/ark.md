@@ -5,34 +5,33 @@ order: 4
 anonymized: true
 title: "Edge AI Appliance OS Builder"
 summary: "A build system that assembles Jetson OS images from selectable feature modules"
-period: {"start": "2026-10"}
+period: {"start": "2026-01", "end": "2026-10"}
 role: "Design and development"
 stack: ["Python", "NVIDIA Jetson AGX Orin", "systemd", "PostgreSQL 17", "Qdrant", "KVM", "NGINX"]
 platforms: ["edge", "server"]
 cover: "/projects/ark/01-setup.webp"
 images: [{"src": "/projects/ark/01-setup.webp", "alt": "First-boot setup: choose install mode"}, {"src": "/projects/ark/02-features.webp", "alt": "Choosing feature profiles"}]
 links: []
-metrics: [{"value": "1,905", "label": "tests"}, {"value": "7", "label": "feature profiles"}, {"value": "164", "label": "image checks"}]
+metrics: [{"value": "7", "label": "feature profiles"}, {"value": "3", "label": "initial setup paths"}, {"value": "4 languages", "label": "supported in portal and admin screens"}]
 code: "EJ104"
 status: {"label": "Pre-acceptance", "tone": "wait"}
 ---
 
 ## Problem
 
-We needed an on-premises AI knowledge appliance configured differently for each customer. One customer wants document management and OCR, another wants RAG, a wiki, or developer VMs. Hand-built images kept shipping with a feature missing or a version mismatched.
+Customers needed different combinations of document management, OCR, RAG, a wiki, and developer VMs on an on-premises AI appliance. Manually building an image for each configuration made it difficult to manage features, dependencies, and versions consistently.
 
 ## What I built
 
-A CLI that defines boards, profiles, and modules declaratively and assembles an OS image through `plan → stage → provision → image`. The Base layer brings PostgreSQL 17, an NGINX gateway, and a manifest that stitches feature UIs together. Features stack on top as profiles: base, documents, wiki, rag, assistant, workshop, full.
+A system that assembles Jetson OS images from feature modules and lets users select the features they need in a web setup after installation. It combines document management, search, a wiki, external AI connections, VPN, and a developer workspace on a common base. Initial setup supports a fresh installation, use of existing data, or restoration from a compatible backup.
 
 ## Design decisions
 
-- **A selected feature is never silently dropped.** Every module declares its dependencies, packages, artifacts, and services; a missing asset or hash mismatch stops the build.
-- **Optional features cannot take the box down.** If VPN, OAuth, or PKI setup fails, the LAN base still comes up.
-- **Commercially licensable.** Replaced a non-commercial reranker with GTE.
-- **Existing data is preserved.** On device migration, NVMe data is matched by UUID and kept; nothing is auto-formatted.
-- **Fully offline installs.** Every external asset is pinned by SHA256, and encrypted backup and restore use a journal with rollback.
+- **Managing feature combinations and dependencies.** Boards, profiles, and modules are declared with their required dependencies. The build stops when a required asset is missing or fails verification rather than silently omitting a selected feature.
+- **Separating base access from optional features.** VPN and certificate setup are tracked separately from basic LAN web access so their status can be checked independently if setup fails.
+- **Protecting existing data.** Initial setup checks NVMe identity and data layout without automatically formatting the drive. Backup restoration also checks device and image compatibility.
+- **Choosing an installation method.** Online setup downloads pinned assets, while the preloaded approach includes the necessary assets in the image.
 
 ## Status
 
-Source-complete, with hardware acceptance testing next.
+Image installation and access to the initial setup page were confirmed on actual hardware. Individual features and acceptance testing still require further verification.

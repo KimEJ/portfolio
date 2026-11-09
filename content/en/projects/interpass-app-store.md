@@ -4,7 +4,7 @@ tier: "archive"
 order: 104
 title: "Internal App Store"
 summary: "An internal store for distributing the maintenance apps"
-period: {"start": "2022-08", "end": "2024-10"}
+period: {"start": "2023-10", "end": "2024-01"}
 role: "Web"
 stack: ["Vue", "TypeScript", "Firebase"]
 platforms: ["web"]
@@ -15,4 +15,10 @@ code: "EJ904"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-Built a web store for distributing and versioning the bus and taxi maintenance mobile apps internally.
+## Problem
+
+Staff needed a place to find and install the mobile apps used for bus and taxi maintenance, and to check available versions and release notes.
+
+## What I built
+
+I built an internal web store for distributing and managing versions of the mobile apps. The app list and detail pages show release notes and let staff download each version.

@@ -4,7 +4,7 @@ tier: "archive"
 order: 103
 title: "Taxi App-Meter Management"
 summary: "Web console for collecting and aggregating taxi app-meter trip data"
-period: {"start": "2022-08", "end": "2024-10"}
+period: {"start": "2024-01", "end": "2024-05"}
 role: "Web"
 stack: ["Nuxt", "Vue", "TypeScript", "GraphQL"]
 platforms: ["web"]
@@ -15,4 +15,10 @@ code: "EJ903"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-Built the web console that collects, aggregates, and browses trip data reported by taxi app-meters.
+## Problem
+
+Staff needed a management interface to examine taxi app-meter trip records by vehicle and period, including summaries of distance and fares.
+
+## What I built
+
+I built a web interface for aggregating and browsing app-meter trip data. Staff can find trips by date, time, and vehicle, check distances and fares, and view detailed records in tables and charts.

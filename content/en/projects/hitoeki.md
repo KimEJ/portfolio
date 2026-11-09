@@ -9,10 +9,10 @@ role: "Product, design, engineering"
 stack: ["Swift", "SwiftUI", "Metal", "ActivityKit", "WidgetKit", "PMTiles", "PLATEAU"]
 platforms: ["ios"]
 images: []
-links: []
-metrics: [{"value": "628", "label": "selectable stations"}, {"value": "96", "label": "UI tests"}, {"value": "5", "label": "languages"}]
+links: [{"label": "TestFlight", "url": "https://testflight.apple.com/join/fRBQEEaN"}]
+metrics: [{"value": "628 station choices", "label": "Available when issuing a ticket"}, {"value": "2 ways to ride", "label": "Destination ticket or IKA free ride"}, {"value": "5 UI languages", "label": "Korean, English, Japanese, Simplified and Traditional Chinese"}]
 code: "EJ102"
-status: {"label": "In development", "tone": "wait"}
+status: {"label": "TestFlight beta", "tone": "go"}
 ---
 
 ## Problem
@@ -21,17 +21,17 @@ Timer apps feel dry when you want to focus or unwind. I wanted something closer 
 
 ## What I built
 
-An iPhone and iPad app that runs the whole trip: pick stations, receive a ticket, board, ride, arrive. Platforms, window scenery, and transfers are rendered in Metal, and progress shows on the Lock Screen through a Live Activity and widgets. Route, journey, and persistence logic lives in a local Swift package (HitoekiCore).
+An iPhone and iPad app that takes you from choosing stations and receiving a ticket through boarding, riding, and arrival. Choose a destination ticket, or use IKA free ride to choose a train and a stop at which to get off. Platforms, window scenery, and transfers are rendered in Metal, while a Live Activity and widgets show progress on the Lock Screen.
 
 ## Design decisions
 
-- **Never download the whole map.** Japan's GSI PMTiles are read with HTTP Range requests, one tile at a time. A cached tile is reused only when its URL, ETag, and length all match.
-- **No map SDK.** The 2D map and the Metal views share one loader with hard cache limits: 24 MiB for 2D raster, 48 MiB for Metal vectors, 64 MiB on disk.
-- **No invented data.** When building heights are missing, the app does not make them up. It also shows no fake fares or serial numbers.
+- **A continuous journey.** A 2D map supports ticketing and route review, while Metal scenes connect the platform, ride, and transfer experiences.
+- **Load only the map data needed.** Japan's GSI PMTiles are read with HTTP Range requests and cached, avoiding a full map download in advance.
+- **Distinguishing reality from the simulation.** Missing building heights are not invented, and the app avoids information that could be mistaken for real fares or a reservation service. IKA is a virtual way to ride and does not process real payments.
 - **Only finished journeys count.** A trip you abandon is not recorded.
 
 ## Status
 
-In development and not yet submitted to the App Store.
+The beta is available through TestFlight.
 
 <small>Maps: GSI Japan tiles · Terrain: PLATEAU (CC BY 4.0)</small>

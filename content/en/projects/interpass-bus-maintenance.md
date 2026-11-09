@@ -3,8 +3,8 @@ kind: "company"
 tier: "archive"
 order: 101
 title: "Bus Maintenance Management System"
-summary: "Digitized paper-based bus terminal maintenance and inventory"
-period: {"start": "2022-08", "end": "2024-10"}
+summary: "Digitizing paper-based maintenance and inventory management for bus devices"
+period: {"start": "2022-08", "end": "2023-08"}
 role: "Backend and web"
 stack: ["NestJS", "GraphQL", "MySQL", "Vue", "Vuetify"]
 platforms: ["web", "server"]
@@ -15,4 +15,12 @@ code: "EJ901"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-Moved analog bus-terminal maintenance and inventory workflows into a web system. I owned the backend and admin web.
+## Problem
+
+Bus device maintenance and inventory were managed using manual processes. Intake and field staff needed a shared way to see work and device information.
+
+## What I built
+
+I built a web system for managing maintenance requests and their progress, inventory, and records of transport companies, vehicles, and devices. Staff can filter work by request status and device type and see progress on a dashboard.
+
+I worked on the backend and admin web, with a GraphQL API providing work data to the intake and field interfaces.

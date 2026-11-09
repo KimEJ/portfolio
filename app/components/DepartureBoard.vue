@@ -4,6 +4,7 @@ type Row = {
   code: string
   title: string
   summary: string
+  kind: 'personal' | 'client' | 'company'
   period?: { start: string, end?: string }
   platforms: string[]
   status: { label: string, tone: 'go' | 'wait' | 'hold' }
@@ -14,7 +15,8 @@ const props = withDefaults(defineProps<{
   groups: Group[]
   mode?: 'departures' | 'arrivals'
   headingLevel?: 'h1' | 'h2'
-}>(), { mode: 'departures', headingLevel: 'h2' })
+  completedStatus?: boolean
+}>(), { mode: 'departures', headingLevel: 'h2', completedStatus: false })
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -80,7 +82,7 @@ const delayFor = (code: string, extra = 0) => (order.value[code] ?? 0) * 140 + e
             </span>
             <span class="when mono hide-sm">{{ isDep ? fmtMonth(row.period?.start) : (row.period?.end ?? row.period?.start ?? '—').slice(0, 4) }}</span>
             <span class="gate mono hide-sm">{{ gateOf(row.platforms) }}</span>
-            <span class="status-dot" :class="`tone-${row.status.tone}`">{{ row.status.label }}</span>
+            <span class="status-dot" :class="`tone-${completedStatus && row.kind === 'company' ? 'go' : row.status.tone}`">{{ completedStatus && row.kind === 'company' ? t('board.completed') : row.status.label }}</span>
           </NuxtLink>
         </li>
       </ol>

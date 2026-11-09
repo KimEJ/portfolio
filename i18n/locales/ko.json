@@ -35,6 +35,7 @@
     "arrivedAt": "도착",
     "gate": "탑승구",
     "status": "상태",
+    "completed": "완료",
     "featured": "대표 프로젝트",
     "company": "회사 프로젝트"
   },

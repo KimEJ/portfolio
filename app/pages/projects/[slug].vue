@@ -54,7 +54,7 @@ useSeoMeta({
         </p>
         <dl class="fields">
           <div v-if="project.period">
-            <dt>{{ t('project.period') }}</dt><dd class="mono">{{ fmtPeriod(project.period) }}</dd>
+            <dt>{{ t('project.period') }}</dt><dd class="mono">{{ project.period.start === project.period.end ? fmtMonth(project.period.start) : fmtPeriod(project.period) }}</dd>
           </div>
           <div><dt>{{ t('project.gate') }}</dt><dd class="mono">{{ gateOf(project.platforms) }}</dd></div>
           <div><dt>{{ t('project.seat') }}</dt><dd>{{ project.role }}</dd></div>

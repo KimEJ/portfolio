@@ -4,31 +4,30 @@ tier: "more"
 order: 6
 anonymized: true
 title: "RAG Knowledge Assistant for a Manufacturer"
-summary: "Answers questions about internal rules and forms with citations while enforcing department and role access"
-period: {"start": "2026-10"}
+summary: "A knowledge service for managing internal rules and forms and answering questions using documents the employee can access"
+period: {"start": "2026-08", "end": "2026-10"}
 role: "Design and development"
 stack: ["Spring Boot 3", "React", "PostgreSQL", "pgvector", "BGE-M3", "Gemini"]
 platforms: ["web", "server"]
 cover: "/projects/knowledge-assistant/02-answer.webp"
 images: [{"src": "/projects/knowledge-assistant/02-answer.webp", "alt": "An answer with cited articles and source documents"}, {"src": "/projects/knowledge-assistant/01-home.webp", "alt": "User home"}, {"src": "/projects/knowledge-assistant/03-knowledge.webp", "alt": "Knowledge library"}]
 links: []
-metrics: [{"value": "RRF", "label": "vector + full-text fusion"}, {"value": "1024", "label": "-dim in-house embeddings"}, {"value": "19", "label": "DB migrations"}]
+metrics: [{"value": "9 file formats", "label": "PDF, HWP, HWPX, DOC, DOCX, XLSX, PPTX, TXT, MD"}, {"value": "3 search methods", "label": "Semantic, full-text, and article or document number search"}, {"value": "2 work areas", "label": "Employee knowledge use and administrator document management"}]
 code: "EJ202"
 status: {"label": "Demo", "tone": "hold"}
 ---
 
 ## Problem
 
-Employees needed to ask about internal rules and forms in plain language and get answers with sources, using only documents they are allowed to see.
+Employees had to find and read the relevant documents to answer questions about internal rules and forms. The company already had work-support software, but finding and storing documents was inconvenient.
 
 ## What I built
 
-Uploaded documents (PDF, Office, HWP) are extracted, chunked along article boundaries, enriched with LLM-generated search aids, embedded, and stored. It has user and admin web apps backed by Spring Boot APIs.
+I built a service where administrators register documents and manage their permissions and versions, while employees ask questions in natural language and receive answers with sources they can access. Document text is extracted and indexed by article, and answers link back to the source material.
+
+An MCP integration lets external AI tools use authorized documents directly in workflows or add the work knowledge they need.
 
 ## Design decisions
 
-- **Hybrid retrieval.** Vector search alone missed exact article numbers like "Article 12", so it is fused with Postgres full-text search through RRF, and exact article hits are placed first.
-- **Per-document cap.** One document once took every top slot, so results are capped per document.
-- **Access control inside the query.** Permissions are checked in the retrieval SQL itself, not filtered afterwards.
-- **Question routing.** Count and list questions cannot be answered by similarity search, so they take a separate path.
-- **Embedding migration.** Moved from 1536-dim external embeddings to 1024-dim in-house BGE-M3, with a backfill at startup.
+- **Natural language and exact-number search.** Semantic and full-text search are combined with a dedicated path for article and document numbers.
+- **Permission-aware retrieval.** Search results are filtered by user and access path, so answers use only documents the employee is allowed to access.

@@ -3,7 +3,7 @@ kind: "personal"
 tier: "more"
 order: 9
 title: "Japanese and BJT Study App"
-summary: "A web, iOS, and Android Japanese study app with Korean explanations and an adaptive placement test"
+summary: "A study app for general Japanese and BJT-style practice with Korean explanations and adaptive placement"
 period: {"start": "2026-11"}
 role: "Solo"
 stack: ["Expo", "React Native", "TypeScript", "Node.js", "PostgreSQL"]
@@ -11,25 +11,25 @@ platforms: ["web", "ios", "android"]
 cover: "/projects/japanese-study/01-home.webp"
 images: [{"src": "/projects/japanese-study/01-home.webp", "alt": "Home"}, {"src": "/projects/japanese-study/02-lessons.webp", "alt": "Lessons by level"}, {"src": "/projects/japanese-study/03-bjt.webp", "alt": "BJT-style practice"}, {"src": "/projects/japanese-study/04-vocab.webp", "alt": "Vocabulary cards"}]
 links: []
-metrics: [{"value": "7,742", "label": "vocabulary words"}, {"value": "434", "label": "lessons"}, {"value": "340", "label": "BJT-style items"}]
+metrics: [{"value": "7,742", "label": "vocabulary words"}, {"value": "434", "label": "general Japanese lessons"}, {"value": "340", "label": "BJT-style practice questions"}]
 code: "EJ205"
 status: {"label": "In development", "tone": "wait"}
 ---
 
 ## Problem
 
-There were almost no free materials for preparing for the Business Japanese Test (BJT) in Korean.
+I needed a learning tool that combines Korean explanations with practice from basic Japanese through Business Japanese Test (BJT) question types.
 
 ## What I built
 
-General Japanese lessons, BJT-style practice, wrong-answer review, and 7,742 vocabulary words in one app. A single Expo codebase ships to web, iOS, and Android.
+The app brings together general Japanese lessons, BJT-style practice, vocabulary study, and review of incorrect answers. Expo and React Native share the interface across web, iOS, and Android. The content counts above are based on the project's question-bank data.
 
 ## Design decisions
 
-- **Content lives outside the app.** The question bank moved behind an API, so content fixes do not need a client release. The bank is replaced in one transaction, and only when its hash changes.
-- **Adaptive placement.** An IRT-style model with guessing and slip terms picks the next item that should shrink the ability estimate's uncertainty the most.
-- **Only honest features.** No fake spaced repetition and no official-score predictions. Questions are original, not official past papers.
-- **No login.** Progress stays on the device.
+- **Adaptive placement.** Each answer updates an ability estimate that accounts for guesses and mistakes, then the app selects a question intended to reduce uncertainty.
+- **Connecting study and review.** Learners can retry incorrect questions, while vocabulary cards schedule the next review based on their response.
+- **Separating content from progress.** The question bank is served by an API and cached by version; study history stays on the device without a login.
+- **Clarifying practice results.** Original practice questions and reference scores are distinguished from official past papers and actual exam results.
 
 ## Status
 

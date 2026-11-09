@@ -14,4 +14,4 @@ code: "EJ924"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-The site for my side-project team.
+A website introducing a side-project team whose members work across web, mobile apps, and embedded systems.

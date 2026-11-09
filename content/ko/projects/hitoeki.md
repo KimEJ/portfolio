@@ -9,10 +9,10 @@ role: "기획, 설계, 구현"
 stack: ["Swift", "SwiftUI", "Metal", "ActivityKit", "WidgetKit", "PMTiles", "PLATEAU"]
 platforms: ["ios"]
 images: []
-links: []
-metrics: [{"value": "628", "label": "선택 가능한 역"}, {"value": "96", "label": "UI 테스트"}, {"value": "5", "label": "지원 언어"}]
+links: [{"label": "TestFlight", "url": "https://testflight.apple.com/join/fRBQEEaN"}]
+metrics: [{"value": "628개 역 선택 항목", "label": "현재 발권에서 선택 가능"}, {"value": "2가지 승차 방식", "label": "목적지 발권, IKA 자유승차"}, {"value": "5개 화면 언어", "label": "한국어, 영어, 일본어, 중국어 간체·번체"}]
 code: "EJ102"
-status: {"label": "개발 중", "tone": "wait"}
+status: {"label": "TestFlight 베타", "tone": "go"}
 ---
 
 ## 문제
@@ -21,17 +21,17 @@ status: {"label": "개발 중", "tone": "wait"}
 
 ## 만든 것
 
-역 선택, 승차권 발급, 탑승, 주행, 도착까지 이어지는 iPhone·iPad 앱입니다. 승강장, 차창 풍경, 환승 장면은 Metal로 렌더링하고, 진행 상황은 잠금 화면 Live Activity와 위젯으로 보여줍니다. 경로·여정·저장 로직은 로컬 Swift 패키지(HitoekiCore)로 분리했습니다.
+역 선택, 승차권 발급, 탑승, 주행, 도착까지 이어지는 iPhone·iPad 앱입니다. 목적지를 정해 승차권을 발급하거나 IKA 자유승차에서 열차와 내릴 역을 선택할 수 있습니다. 승강장, 차창 풍경, 환승 장면은 Metal로 렌더링하고, 진행 상황은 잠금 화면 Live Activity와 위젯으로 보여줍니다.
 
 ## 설계에서 고민한 것
 
-- **지도 데이터를 통째로 받지 않음.** 일본 국토지리원 PMTiles는 HTTP Range 요청으로 필요한 타일만 읽습니다. 캐시된 타일은 URL, ETag, 길이가 모두 같을 때만 재사용합니다.
-- **지도 라이브러리 없이 직접 구현.** 2D 지도와 Metal 뷰가 공유하는 로더 하나에 캐시 상한을 정했습니다(2D 래스터 24 MiB, Metal 벡터 48 MiB, 디스크 64 MiB).
-- **없는 데이터를 지어내지 않음.** 건물 높이 정보가 없으면 임의로 만들지 않습니다. 실제 운임이나 일련번호처럼 보이는 값도 넣지 않았습니다.
+- **여정에 맞는 화면 구성.** 예약과 경로 확인은 2D 지도로 보여주고, 승강장과 주행·환승은 Metal 장면으로 구성해 승차 경험을 이어갑니다.
+- **필요한 지도 데이터만 읽기.** 일본 국토지리원 PMTiles에서 필요한 타일을 HTTP Range 요청으로 읽고 캐시해, 전체 지도 데이터를 미리 받지 않도록 했습니다.
+- **실제 정보와 가상 경험 구분.** 건물 높이가 없는 자료에는 값을 임의로 만들지 않고, 실제 운임이나 예약 서비스로 오해할 정보를 넣지 않았습니다. IKA는 가상의 승차 방식이며 실제 결제 기능은 없습니다.
 - **완주한 여정만 기록.** 중간에 그만둔 여정은 기록에 남지 않습니다.
 
 ## 현재 상태
 
-개발 중이며 App Store에는 아직 제출하지 않았습니다.
+TestFlight를 통해 베타 버전을 배포하고 있습니다.
 
 <small>지도: 국토지리원(GSI) 타일 · 지형: PLATEAU (CC BY 4.0)</small>

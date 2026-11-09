@@ -35,6 +35,7 @@
     "arrivedAt": "Year",
     "gate": "Gate",
     "status": "Status",
+    "completed": "Completed",
     "featured": "Featured",
     "company": "Company work"
   },

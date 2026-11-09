@@ -14,4 +14,4 @@ code: "EJ923"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-Built the site for a team of developers who volunteer together, and taught in the team's coding classes (Python, Entry).
+I built a website introducing iroun, a developer volunteer team, and its projects. I also participated in the team's coding education volunteer work using Python and Entry.

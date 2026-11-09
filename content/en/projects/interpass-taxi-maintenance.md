@@ -3,8 +3,8 @@ kind: "company"
 tier: "archive"
 order: 102
 title: "Taxi Maintenance Management System"
-summary: "Stock movement, repairs, and inventory for a new taxi terminal maintenance business"
-period: {"start": "2022-08", "end": "2024-10"}
+summary: "Stock movement, repairs, and inventory for a new taxi device maintenance business"
+period: {"start": "2023-03", "end": "2024-01"}
 role: "Backend and web"
 stack: ["NestJS", "GraphQL", "MySQL", "Vue", "Vuetify"]
 platforms: ["web", "server"]
@@ -15,4 +15,12 @@ code: "EJ902"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-Designed stock movement, repairs, inventory, and vehicle tracking for a new taxi-terminal maintenance business, digital from day one.
+## Problem
+
+A newly launched taxi device maintenance business needed a system for managing stock movement, repairs, inventory, and vehicle information.
+
+## What I built
+
+I designed a web system from the ground up for managing dispatch requests, stock movement records, repair request status, and inventory. It also shows vehicle and device information by region and transport company.
+
+I worked on the backend and admin web.

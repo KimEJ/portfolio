@@ -14,4 +14,4 @@ code: "EJ922"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-An unofficial Python client for Wrtn, a Korean AI service.
+An unofficial client for using Wrtn, a Korean AI service, from Python. It supports creating a conversation, sending questions and receiving responses, and deleting the conversation at the end of a session.

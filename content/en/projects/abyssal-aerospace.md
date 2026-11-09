@@ -14,4 +14,4 @@ code: "EJ925"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-The site for a team working on an aerospace project.
+A website introducing a team that worked on an aerospace project, with information on joining and supporting the team.

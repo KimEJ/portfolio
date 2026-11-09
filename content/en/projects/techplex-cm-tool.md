@@ -4,7 +4,7 @@ tier: "archive"
 order: 114
 title: "CM Tool"
 summary: "Desktop tool for firmware updates and configuration of an in-house LTE modem"
-period: {"start": "2018-10", "end": "2022-07"}
+period: {"start": "2018-10", "end": "2019-12"}
 role: "Desktop app"
 stack: ["Electron", "Vue", "TypeScript"]
 platforms: ["desktop"]
@@ -15,4 +15,10 @@ code: "EJ914"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-A desktop program for updating firmware and changing settings on the company's LTE modem.
+## Problem
+
+The in-house LTE modem needed a tool to connect to the device, inspect its status, and manage its settings and firmware.
+
+## What I built
+
+I built a desktop application for updating modem firmware and changing settings. It lets users select a connection port and speed, inspect modem and network status, and access call, text message, and AT command controls.

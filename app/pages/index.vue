@@ -61,7 +61,7 @@ useSeoMeta({
     </section>
 
     <div id="departures" class="anchor">
-      <DepartureBoard :groups="groups" />
+      <DepartureBoard :groups="groups" completed-status />
     </div>
 
     <section v-if="gates.length" class="block" aria-labelledby="gates">

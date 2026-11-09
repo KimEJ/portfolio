@@ -14,4 +14,4 @@ code: "EJ921"
 status: {"label": "Arrived", "tone": "go"}
 ---
 
-A platform for managing bio-healthcare devices, built with my side-project team.
+I developed a platform for managing bio-healthcare devices with my side-project team. Its management interface shows device lists and operating status by region, and the platform connects to devices using MQTT.

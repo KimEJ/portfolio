@@ -5,29 +5,28 @@ order: 8
 anonymized: true
 title: "Manufacturing Execution System"
 summary: "Admin web and a shop-floor mobile view from order to BOM, work order, shipping, and purchasing"
-period: {"start": "2026-10"}
+period: {"start": "2026-09", "end": "2026-10"}
 role: "Design and development"
 stack: ["React 19", "TanStack", "Next.js 16", "Prisma", "PostgreSQL", "Azure Blob"]
 platforms: ["web", "server"]
 cover: "/projects/mes/02-production.webp"
 images: [{"src": "/projects/mes/02-production.webp", "alt": "Production and shipping status"}, {"src": "/projects/mes/03-order-detail.webp", "alt": "Order detail with change history"}, {"src": "/projects/mes/04-field-mobile.webp", "alt": "Shop-floor mobile view"}]
 links: []
-metrics: [{"value": "31", "label": "data models"}, {"value": "~600", "label": "test cases"}, {"value": "0", "label": "backend needed for demo"}]
+metrics: [{"value": "5 production tasks", "label": "Orders, BOM, work orders and production, shipping, material purchasing"}, {"value": "2 work environments", "label": "Administrator web and shop-floor mobile"}, {"value": "3 change histories", "label": "Orders, work stages, shipping"}]
 code: "EJ204"
 status: {"label": "Demo", "tone": "hold"}
 ---
 
 ## Problem
 
-A small manufacturer ran production on spreadsheets and word of mouth. Orders, BOMs, work orders, and shipping lived apart, so nobody could trace who changed what, or when.
+As customer orders moved through production and shipping, everyone involved needed to see the work specifications and changes. If specifications changed after work began, they also needed to trace which specifications had been used.
 
 ## What I built
 
-An admin web app, a mobile view for shop-floor workers (`/field`), and a backend built on Next.js Route Handlers and Prisma.
+I built a production management system that manages customer orders and BOMs, automatically issues work orders when a BOM is confirmed, and connects production and shipping with material purchasing. Administrators can review operations on the web, while shop-floor workers can check work orders and progress on mobile.
 
 ## Design decisions
 
-- **Every transition is history.** Order, work-stage, and shipping transitions are written to dedicated history tables for audit.
-- **BOM revision snapshots.** Committed BOMs are snapshotted and tied to work orders, so the BOM in force at the time is always known.
-- **Stale saves are rejected.** Instead of live sync, a save that would overwrite someone else's newer change is rejected and the latest values are shown.
-- **A demo with no backend.** An in-browser demo API transport lets the whole app run as a static site.
+- **Preserving confirmed specifications.** Confirmed BOMs are saved as revisions and linked to work orders, so their history remains available when specifications change.
+- **Tracking changes.** Major changes to orders, work stages, and shipping are recorded so staff can follow progress.
+- **Protecting concurrent edits.** When multiple users edit order details, a save based on an older version triggers a conflict and prompts the user to review the latest values instead of overwriting an earlier change.
