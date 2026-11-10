@@ -1,0 +1,9 @@
+name: "Eojin Kim"
+headline: "AIサービスと運用基盤を開発するバックエンドエンジニア"
+intro: "IoT端末の遠隔管理から、約10万台のタクシー・バス端末を扱う運用基盤、直近ではRAG・文書AIサービスまで、8年間にわたり開発に携わってきました。機能の実装だけでなく、デプロイ、監視、障害時の動作まで含めて設計しています。業務外ではmacOS・iOSのネイティブアプリや、ローカルで動作するAIツールを開発しています。"
+location: "ソウル"
+email: "kimuj5090@gmail.com"
+links: [{"label": "GitHub", "url": "https://github.com/KimEJ"}, {"label": "ブログ", "url": "https://KimEJ.github.io"}]
+skills: [{"group": "Backend", "items": ["NestJS", "FastAPI", "Spring Boot", "Node.js", "Python", "Java", "TypeScript"]}, {"group": "AI", "items": ["RAG", "pgvector", "Gemini / OpenAI", "Document AI · OCR", "llama.cpp", "MCP"]}, {"group": "Data", "items": ["PostgreSQL", "MySQL · MariaDB", "MongoDB", "Redis", "SQLite"]}, {"group": "Infra", "items": ["Docker", "Azure · Bicep", "AWS ECS", "Naver Cloud", "NGINX", "systemd"]}, {"group": "クライアント", "items": ["Vue", "React · Next.js", "Swift · SwiftUI", "Metal", "Electron", "Expo"]}, {"group": "Embedded · IoT", "items": ["C", "Embedded Linux", "LwM2M"]}]
+education: [{"school": "漢陽サイバー大学校", "major": "応用ソフトウェア工学科", "period": {"start": "2023-03"}, "status": "在学中"}, {"school": "大徳ソフトウェアマイスター高等学校", "major": "組み込みソフトウェア", "period": {"start": "2016-03", "end": "2019-02"}, "status": "卒業"}]
+certifications: [{"date": "2017-12", "title": "ISTQB Certified Tester", "issuer": "ISTQB"}, {"date": "2017-11", "title": "農業フィンテック・アイデアソン大賞", "issuer": "NH農協銀行"}, {"date": "2016-09", "title": "情報処理機能士", "issuer": "韓国産業人力公団"}]

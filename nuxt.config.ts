@@ -3,7 +3,7 @@ import { join } from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 import { contentLocales } from './locales'
 
-const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'https://portfolio-kimej.vercel.app'
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'https://portfolio-sage-two-91.vercel.app'
 const slugs = new Set<string>()
 for (const locale of contentLocales) {
   const directory = join(process.cwd(), 'content', locale, 'projects')

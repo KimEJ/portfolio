@@ -13,21 +13,21 @@ npx nuxi typecheck
 npm run generate  # static output in .output/public
 ```
 
-Set `NUXT_PUBLIC_SITE_URL` to the deployed site URL when generating; it defaults to `https://portfolio-kimej.vercel.app`.
+Set `NUXT_PUBLIC_SITE_URL` to the deployed site URL when generating; it defaults to `https://portfolio-sage-two-91.vercel.app`. The Korean site is at `/`, English at `/en`, and Japanese at `/ja`. Direct language URLs can be shared independently.
 
 ## Content
 
 ```text
 content/
-  ko/                        en/
-    profile.yml                profile.yml
-    projects/<slug>.md         projects/<slug>.md
-    career/<slug>.md           career/<slug>.md
+  ko/                        en/                        ja/
+    profile.yml                profile.yml                profile.yml
+    projects/<slug>.md         projects/<slug>.md         projects/<slug>.md
+    career/<slug>.md           career/<slug>.md           career/<slug>.md
 ```
 
 Content v3 uses separate collections per locale with shared schemas, following its i18n integration guidance. Missing localized entries fall back to Korean. Project and career slugs should match across locales.
 
-To add a project, create a Markdown file under `content/ko/projects/` with frontmatter matching the project schema in `content.config.ts`; add the same slug under `content/en/projects/` when translated. Project pages are generated for each locale.
+To add a project, create a Markdown file under `content/ko/projects/` with frontmatter matching the project schema in `content.config.ts`; add the same slug under `content/en/projects/` and `content/ja/projects/` when translated. Project pages are generated for each locale.
 
 ## Add a locale
 

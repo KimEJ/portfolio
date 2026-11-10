@@ -1,0 +1,104 @@
+{
+  "home": "ホーム",
+  "projects": "プロジェクト",
+  "archive": "アーカイブ",
+  "career": "経歴",
+  "portfolio": "ポートフォリオ",
+  "siteOwner": "Eojin Kim",
+  "ogLocale": "ja_JP",
+  "archiveDescription": "2018〜2024年の業務と小規模な個人プロジェクト",
+  "error": "エラー",
+  "errorDescription": "ページを表示できませんでした。",
+  "notFound": "該当する便が見つかりません。",
+  "backHome": "出発案内板へ",
+  "navigation": "メインメニュー",
+  "language": "言語",
+  "skip": "本文へスキップ",
+  "nav": {
+    "departures": "出発",
+    "departuresSub": "プロジェクト",
+    "itinerary": "旅程",
+    "itinerarySub": "経歴",
+    "arrivals": "到着",
+    "arrivalsSub": "アーカイブ",
+    "info": "案内",
+    "infoSub": "連絡先"
+  },
+  "board": {
+    "departures": "出発",
+    "arrivals": "到着",
+    "departuresSub": "Departures",
+    "arrivalsSub": "Arrivals",
+    "flight": "便名",
+    "destination": "行き先",
+    "time": "開始",
+    "arrivedAt": "終了年",
+    "gate": "ゲート",
+    "status": "状況",
+    "completed": "完了",
+    "featured": "主なプロジェクト",
+    "company": "業務プロジェクト"
+  },
+  "checkin": {
+    "title": "チェックイン",
+    "main": "専門",
+    "recent": "注力分野",
+    "contact": "連絡先",
+    "mainValue": "NestJS · FastAPI · Spring",
+    "recentValue": "RAG · 文書AI · MCP",
+    "career": "経験",
+    "careerValue": "バックエンド開発 8年",
+    "last": "直近"
+  },
+  "gates": {
+    "title": "プロジェクトを見る",
+    "sub": "Gate view"
+  },
+  "itinerary": {
+    "title": "経歴",
+    "sub": "Itinerary",
+    "pass": "搭乗券",
+    "passenger": "搭乗者",
+    "present": "現在",
+    "class": "職種",
+    "classValue": "バックエンド",
+    "years": "経験",
+    "yearsValue": "8年",
+    "edu": "学歴"
+  },
+  "stack": {
+    "title": "技術スタック",
+    "sub": "Carry-on"
+  },
+  "credentials": {
+    "title": "学歴・資格",
+    "sub": "Documents"
+  },
+  "contact": {
+    "label": "インフォメーション",
+    "lead": "プロジェクト・協業・採用に関するお問い合わせは、メールでお願いいたします。",
+    "github": "GitHub"
+  },
+  "project": {
+    "flight": "便名",
+    "period": "期間",
+    "gate": "ゲート",
+    "seat": "担当",
+    "class": "区分",
+    "status": "状況",
+    "stack": "技術",
+    "links": "リンク",
+    "gallery": "手荷物受取所",
+    "gallerySub": "Screens",
+    "prev": "前の便",
+    "next": "次の便"
+  },
+  "kind": {
+    "personal": "個人",
+    "company": "業務",
+    "client": "顧客向け"
+  },
+  "footer": {
+    "rights": "Eojin Kim"
+  }
+}
